@@ -1,5 +1,4 @@
-# DeepLabCut-ultrasound
-DeepLabCut-Ultrasound 超声波舌位自动分析模型使用说明  
+# DeepLabCut-ultrasound　超声波舌位自动提取模型使用说明  
 
 **模型简介**
 
