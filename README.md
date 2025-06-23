@@ -5,6 +5,7 @@
 这个模型是基于DeepLabCut（DLC）深度学习框架开发的专用工具，能够自动识别超声波图像中的舌头轮廓。它就像一位"数字观察员"，可以精确地标出舌头边缘的关键位置，并将这些位置信息以坐标形式保存到CSV文件中，方便后续分析和研究。  
 
 **学术引用**
+
 **重要提示：如果您在学术研究中使用本模型，请在发表的论文中引用以下文献：**
 J. Sun, T. Kitamura, and R. Hayashi (2025). "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut". _Acoustical Science and Technology_, 1-7.
 https://doi.org/10.1250/ast.e24.128
