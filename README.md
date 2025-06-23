@@ -7,7 +7,7 @@
 **学术引用**
 
 **重要提示：如果您在学术研究中使用本模型，请在发表的论文中引用以下文献：**
-J.Sun, T.Kitamura, andR.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).
+J.Sun, T.Kitamura, and R.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).
 https://doi.org/10.1250/ast.e24.128
 
 **系统要求**
