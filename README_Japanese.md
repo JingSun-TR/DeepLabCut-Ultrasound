@@ -9,7 +9,8 @@
 ※ 抽出された輪郭データが使用可能かどうかは，まず保存された輪郭線付きの動画で確認する必要がある
 
 **学術的引用**  
-**このモデルを学術研究で使用する場合は，以下を引用する：**
+このモデルを学術研究で使用する場合は，以下を引用する：
+
 J.Sun, T.Kitamura, and R.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).  
 https://doi.org/10.1250/ast.e24.128  
 
