@@ -20,7 +20,7 @@ https://doi.org/10.1250/ast.e24.128
 2. **Nvidiaドライバー**  
    https://www.nvidia.com/Download/index.aspx?lang=en-us （GPUなしでは不要）  
 3. **CUDA Toolkit**  
-   https://developer.nvidia.com/cuda/downloads?target_os=Windows&arch=x86_64&version=11&type=exe_local（GPUなしでは不要）  
+   https://developer.nvidia.com/cuda/downloads?target_os=Windows&arch=x86_64&version=11&type=exe_local （GPUなしでは不要）  
 ※ WindowsおよびMacOSに対応．GPUがなくても動作するが，GPUがある方が処理速度が速い．
   
 **処理速度の比較**  
