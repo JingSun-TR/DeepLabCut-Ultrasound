@@ -58,6 +58,38 @@ https://doi.org/10.1250/ast.e24.128
 2. DLCでは少ないキーポイントが理想的だが，等間隔では30点以上が必要になる
 3. キーポイントの数が増えると，学習データの作成やトレーニングに時間がかかる
 
+**DLCモデルの使い方（輪郭抽出）**
+1. DeepLabCutの起動
+   Windows：Anaconda Prompt (miniconda3) で以下を実行
+    1. conda activate deeplabcut
+    2. python -m deeplabcut
+   Mac：ターミナルで上記と同じコマンドを実行
+
+2. プロジェクトの読み込み
+   ①GUIが開いたら 「Load Project」 をクリック
+   ②DLCモデル内の 「config.yaml」 を選択
+   
+3. 動画の解析（輪郭抽出）
+   ①「Analyze videos」 をクリック
+   ②「Select videos」 をクリックし、解析したい動画（MP4/AVI/MKV/MOV）を選択
+　　※注意：動画内で舌先は右側，舌根は左側にする必要がある
+   ③以下のオプションにチェックを入れる
+    ✅ Save result(s) as csv
+    ✅ Filter predictions
+    ✅ Plot trajectories
+   ④右下の「Analyze videos」 をクリックして解析開始
+   
+4. 輪郭線付き動画の作成
+   ①「Create videos」 をクリック
+   ②以下のオプションにチェックを入れる
+    ✅ Plot all bodyparts
+    ✅ Draw skeleton
+    ✅ Use filtered data
+    ✅ Plot trajectories
+   ③右下の「Create videos」 をクリックして動画を保存
+
+5. 結果の確認
+保存された動画を確認し，輪郭線が正しく抽出されているかチェック
 
 
 
