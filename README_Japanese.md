@@ -1,95 +1,152 @@
 # DeepLabCut-Ultrasound 
 **DLCを用いた超音波舌輪郭抽出モデルの説明**
 
-**モデル概要**  
-1. このモデルは，DeepLabCut（DLC）というAIツールを用いて，超音波動画から舌の輪郭を自動抽出する
-2. 抽出された舌の輪郭点（キーポイント）は座標としてCSVファイルに保存される
-3. 保存されたCSVファイルは2つあるが，「folder」で終わるファイルを分析に使用する
-4. これにより，キーフレームを選び，同一の図に異なる音の輪郭線を重ねて分析できる
+ **モデルの概要**
+このモデルは，超音波動画（舌の動きを映した映像）から舌の形を自動で抽出するツールだ．以下がポイント：
 
-※ 抽出された輪郭データ（CSVファイル）が使用可能かどうかは，まず保存された輪郭線付きの動画で確認する必要がある
+1. **何ができる？**
+   - 超音波動画から舌の輪郭を検出し，輪郭上のポイント（座標）をデータとして保存する．
+   - データはCSVファイル（表形式のデータファイル）で出力される．
+   - 2つのCSVファイルが作られるが，**名前に「folder」がつくファイル**を分析に使う．
+   - このデータを使えば，異なる音を発する時の舌の動きを1つのグラフに重ねて比較できる．
 
-**モデルの学習データの詳細**
-1. 合計4,821フレームのデータを使用
-2. GE Healthcareとトリプルエーの2種類の超音波装置のデータを含む
-3. アジア系と欧米系の話者のデータを含む
-4. MSIノートPC（GPU: NVIDIA GeForce RTX 3060）で約10時間を要したが，より高性能なGPUなら学習時間は短縮可能
-5. 学習回数は103万回
+2. **結果の確認方法**
+   - モデルが正しく輪郭を検出したかは，**輪郭線が描かれた動画**を見てチェックする．
+   - 動画で輪郭が舌の形に沿っていれば，CSVデータの座標も信頼できる．
 
-**学術的引用**  
-このモデルを学術研究で使用する場合は，以下を引用する：
 
-J.Sun, T.Kitamura, and R.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).  
-https://doi.org/10.1250/ast.e24.128  
 
-**対応OS**
-1. WindowsおよびMacOSに対応
-2. GPUがなくても動作するが，GPUがある方が処理速度が速い
+ **モデルの学習データ**
+このモデルは以下のようなデータで作られている：
+- **データ量**：4,821フレーム（動画の1コマの数）．
+- **データの種類**：
+  - 2種類の超音波装置（GE Healthcareとトリプルエー）の映像．
+  - アジア系と欧米系の話者の舌の動き．
+- **学習に使ったパソコン**：
+  - MSIのノートPC（GPU：NVIDIA GeForce RTX 3060）で約10時間かかった．
+  - もっと高性能なGPUなら学習がもっと速くなる．
+- **学習回数**：103万回（モデルがデータを繰り返し学習した回数）．
 
-**環境設定**  
-本モデルを使用する前に，以下のソフトウェアをインストールする：  
+
+
+ **研究で使う場合**
+論文や研究でこのモデルを使うなら，以下を引用する：
+> J.Sun, T.Kitamura, and R.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", *Acoustical Science and Technology*, 1-7 (2025).  
+> https://doi.org/10.1250/ast.e24.128
+
+
+
+ **対応するパソコン**
+- **Windows**と**Mac**で使える．
+- **GPU（グラフィック処理装置）**：
+  - なくても動くが，GPUがあると処理が速い．
+  - GPUがあれば，動画の処理がスムーズに進む．
+
+
+
+ **準備：必要なソフトのインストール**
+モデルを使う前に，以下のソフトをパソコンにインストールする：
+
 1. **Miniconda**  
-   https://docs.anaconda.com/miniconda/
-2. **Nvidiaドライバー**  （GPUなしの場合は不要）  
-   https://www.nvidia.com/Download/index.aspx?lang=en-us 
-3. **CUDA Toolkit**  （GPUなしの場合は不要） 
-   [https://developer.nvidia.com/cuda/downloads?target_os=Windows&arch=x86_64&version=11&type=exe_local](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local)  
-  
-**処理速度の比較**  
-1. GPUを使用（例：NVIDIA GeForce RTX 3060）   
-   ① 1秒あたり200フレーム以上の処理が可能
-   ② 1本または複数の動画を処理できる 
-2. GPUなし（CPUのみ）：  
-   ① 1秒あたり10～20フレーム程度の処理
-   ② 短い超音波動画に適している  
+   - Pythonを簡単に管理するツール．
+   - インストール：https://docs.anaconda.com/miniconda/
+   - サイトからダウンロードし，画面の指示に従ってインストールする．
 
-**処理対象**  
-このモデルは，以下のサイズの超音波動画に対応する：  
-1. 動画サイズ：320ピクセル（幅）×240ピクセル（高さ） 
-2. このサイズは，モデルのトレーニング時に使用したため，異なるサイズだと正確に輪郭を抽出できない  
+2. **Nvidiaドライバー**（GPUを使う場合のみ）
+   - GPUを使うなら，Nvidiaのドライバーをインストールする．
+   - インストール：https://www.nvidia.com/Download/index.aspx?lang=en-us
+   - 自分のGPUに合うドライバーを選ぶ．
 
-**キーポイントの設定**（設定理由は下記参照）  
-1. 舌の輪郭を抽出するため，11個のキーポイントを使用する  
-2. 舌の形状を還元するため，舌の輪郭線に沿って入れる
-3. キーポイント間の距離は等間隔である必要はない
+3. **CUDA Toolkit**（GPUを使う場合のみ）
+   - GPUで高速処理するためのツール．
+   - インストール：https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local
+   - Windowsならバージョン11を選んでインストールする．
 
-**なぜ等間隔にしないのか？**  
-1. 11点を等間隔に配置すると，実際の舌形状を正確に抽出できない場合がある   
-2. DLCでは少ないキーポイントが理想的だが，等間隔では30点以上が必要になる
-3. キーポイントの数が増えると，学習データの作成やトレーニングに時間がかかる
+※ GPUがない場合は，MinicondaだけでOK！
 
-**DLCモデルの使い方（輪郭抽出）**
-1. DeepLabCutの起動
-   Windows：Anaconda Prompt (miniconda3) で以下を実行
-    1. conda activate deeplabcut
-    2. python -m deeplabcut
-   Mac：ターミナルで上記と同じコマンドを実行
 
-2. プロジェクトの読み込み
-   ①GUIが開いたら 「Load Project」 をクリック
-   ②DLCモデル内の 「config.yaml」 を選択
-   
-3. 動画の解析（輪郭抽出）
-   ①「Analyze videos」 をクリック
-   ②「Select videos」 をクリックし、解析したい動画（MP4/AVI/MKV/MOV）を選択
-　　※注意：動画内で舌先は右側，舌根は左側にする必要がある
-   ③以下のオプションにチェックを入れる
-    ✅ Save result(s) as csv
-    ✅ Filter predictions
-    ✅ Plot trajectories
-   ④右下の「Analyze videos」 をクリックして解析開始
-   
-4. 輪郭線付き動画の作成
-   ①「Create videos」 をクリック
-   ②以下のオプションにチェックを入れる
-    ✅ Plot all bodyparts
-    ✅ Draw skeleton
-    ✅ Use filtered data
-    ✅ Plot trajectories
-   ③右下の「Create videos」 をクリックして動画を保存
 
-5. 結果の確認
-保存された動画を確認し，輪郭線が正しく抽出されているかチェック
+ **処理速度の違い**
+- **GPUあり powered by xAIあり**（例：NVIDIA GeForce RTX 3060）：
+  - 1秒に200フレーム以上処理できる（かなり速い！）．
+  - 長い動画や複数の動画もスムーズに処理できる．
+- **GPUなし（CPUのみ）**：
+  - 1秒に10～20フレーム程度（少し遅い）．
+  - 短い動画なら十分使える．
 
+
+
+ **対応する動画のサイズ**
+このモデルは以下のサイズの超音波動画専用：
+- **幅320ピクセル × 高さ240ピクセル**
+- このサイズでないと，正確に輪郭を検出できないので注意！
+
+
+
+ **舌の輪郭の検出方法**
+- 舌の輪郭を検出するため，**11個のポイント**（点）を使う．
+- これらの点は，舌の形を正確に表現できるよう，舌の輪郭に沿って配置される．
+- **ポイント：等間隔に配置しない！**
+  - 等間隔だと，正確な形を捉えるのに30点以上必要になる．
+  - 点が多いとデータ作成や学習に時間がかかる．
+  - 11点で効率的かつ正確に舌の形を表現できるように工夫されている．
+
+
+
+ **モデルの使い方：ステップごとの説明**
+超音波動画から舌の輪郭を抽出する手順を，初心者向けにわかりやすく説明する！
+
+# **1. DeepLabCutを起動する**
+- **Windows**：
+  1. 「Anaconda Prompt (miniconda3)」を検索して開く．
+  2. 以下のコマンドを順に入力：
+     ```
+     conda activate deeplabcut
+     python -m deeplabcut
+     ```
+- **Mac**：
+  1. 「ターミナル」を開く．
+  2. 上と同じコマンドを入力．
+
+これで，DeepLabCutの操作画面（ウィンドウ）が開く．
+
+# **2. プロジェクトを読み込む**
+1. 操作画面が開いたら，「Load Project」ボタンをクリック．
+2. DLCモデルのフォルダにある「**config.yaml**」ファイルを選ぶ．
+   - このファイルは，モデルの設定が書かれた重要なファイル．
+
+# **3. 動画を解析する（輪郭を抽出）**
+1. 操作画面で「Analyze videos」ボタンをクリック．
+2. 「Select videos」をクリックし，解析したい動画を選ぶ．
+   - 対応形式：MP4，AVI，MKV，MOV．
+   - **注意**：動画内で**舌先が右側，舌根が左側**になるようにする．
+3. 以下のチェックボックスにチェックを入れる：
+   - ✅ Save result(s) as csv（結果をCSVで保存）
+   - ✅ Filter predictions（予測を滑らかにする）
+   - ✅ Plot trajectories（軌跡を描く）
+4. 右下の「Analyze videos」ボタンをクリックして解析を始める．
+
+# **4. 輪郭線付き動画を作る**
+1. 操作画面で「Create videos」ボタンをクリック．
+2. 以下のチェックボックスにチェック：
+   - ✅ Plot all bodyparts（すべてのポイントを表示）
+   - ✅ Draw skeleton（ポイントをつなぐ線を描く）
+   - ✅ Use filtered data（滑らかなデータを使う）
+   - ✅ Plot trajectories（軌跡を描く）
+3. 右下の「Create videos」ボタンをクリックして，輪郭線付き動画を保存する．
+
+# **5. 結果を確認する**
+- 保存された**輪郭線付き動画**を見て，舌の輪郭が正しく検出されているか確認する．
+- 輪郭が正しければ，CSVファイル（「folder」で終わるもの）の座標データを使って分析できる．
+
+
+
+ **まとめ**
+- このモデルは，超音波動画から舌の輪郭を簡単に抽出できる便利なツール．
+- WindowsやMacで使え，GPUがあれば処理が速い．
+- 動画サイズ（320×240ピクセル）と舌の向き（舌先が右，舌根が左）に注意．
+- 結果は輪郭線付き動画で確認し，CSVデータで分析できる．
+
+わからないことがあれば，具体的な質問をどうぞ！ステップごとに丁寧にお答えする！
 
 
