@@ -28,6 +28,7 @@
 - **学習回数**：103万回（モデルがデータを繰り返し学習した回数）．
 
  **研究で使う場合**
+ 
 論文や研究でこのモデルを使うなら，以下を引用する：
 > J.Sun, T.Kitamura, and R.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).  
 > https://doi.org/10.1250/ast.e24.128
@@ -39,6 +40,7 @@
   - GPUがあれば，動画の処理がスムーズに進む．
 
  **準備：必要なソフトのインストール**
+ 
 モデルを使う前に，以下のソフトをパソコンにインストールする：
 
 1. **Miniconda**  
