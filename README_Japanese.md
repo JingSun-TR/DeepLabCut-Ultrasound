@@ -107,25 +107,25 @@ python -m deeplabcut
    ```
 
 2. **プロジェクトの読み込み**:
-   - GUIで「Load Project」をクリックし、モデルフォルダ内の `config.yaml` を選択。
+   - GUIで「**Load Project**」をクリックし、モデルフォルダ内の **`config.yaml`** を選択。
 
 3. **動画の解析（輪郭抽出）**:
-   - 「Analyze videos」で動画を選択。
+   - 「**Analyze videos**」で動画を選択。
    - 舌先が右、舌根が左になるように動画を準備。
-   - チェックボックス：☑ Save result(s) as CSV, ☑ Filter predictions, ☑ Plot trajectories。
-   - 「Analyze videos」をクリック。
+   - チェックボックス：☑ **Save result(s) as** CSV, ☑ **Filter predictions**, ☑ **Plot trajectories**。
+   - 「**Analyze videos**」をクリック。
    - **処理速度**:
      - Windows GPU（例：NVIDIA RTX 3060）: 約200フレーム/秒
-     - Mac CPU（例：M1/M2）: 約10～20フレーム/秒
+     - Windows/Mac CPU（例：M1/M2）: 約10～20フレーム/秒
 
 4. **輪郭線付き動画の作成**:
-   - 「Create videos」をクリック。
-   - チェックボックス：☑ Plot all bodyparts, ☑ Draw skeleton, ☑ Use filtered data, ☑ Plot trajectories。
-   - 「Create videos」をクリック。
+   - 「**Create videos**」をクリック。
+   - チェックボックス：☑ **Plot all bodyparts**, ☑ **Draw skeleton**, ☑ **Use filtered data**, ☑ **Plot trajectories**。
+   - 「**Create videos**」をクリック。
 
 5. **結果の確認**:
    - 輪郭線付き動画で舌の形状を確認。
-   - 「filtered」CSVファイルを使用して分析。
+   - 「**filtered**」CSVファイルを使用して分析。
 
 ### 舌輪郭の抽出方法
 
