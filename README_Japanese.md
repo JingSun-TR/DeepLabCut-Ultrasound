@@ -1,137 +1,160 @@
-# DeepLabCut-Ultrasound 
-**DLCを用いた超音波舌輪郭抽出モデルの説明**
+DeepLabCut-Ultrasound
+DeepLabCut-Ultrasound は、DeepLabCut（深層学習フレームワーク）を用いて超音波動画から舌の輪郭を自動抽出するツールです。音声研究における舌の動きの分析を効率化するために開発され、WindowsおよびMacで動作します。抽出された輪郭座標はCSV形式で出力され、言語研究に活用できます。
+DeepLabCut-Ultrasound について
+本ツールは、超音波動画から舌の輪郭を抽出し、座標データをCSV形式で保存します。2つのCSVファイルが出力されますが、分析には**「filtered」**と名付けられたファイルを使用してください。また、抽出された輪郭を視覚的に確認するための輪郭線付き動画も生成されます。
+このモデルは、DeepLabCutを基盤として構築され、多様な超音波装置や話者データを用いて学習されています。詳細な手法については、以下の論文を参照してください：
 
- **モデルの概要**
- 
- このモデルは，超音波動画（舌の動きを映した映像）から舌の輪郭を自動で抽出するツールだ．以下がポイント：
+J. Sun, T. Kitamura, and R. Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut," Acoustical Science and Technology, 1-7 (2025).https://doi.org/10.1250/ast.e24.128
 
-1. **何ができる？**
-   - 超音波動画から舌の輪郭を抽出し，輪郭上のポイント（座標）をデータとして保存する．
-   - データはCSVファイル（表形式のデータファイル）で出力される．
-   - 2つのCSVファイルが作られるが，**名前に「filtered」がつくファイル**を分析に使う．
-   - この輪郭データを使えば，異なる音を発する時の舌の動きを1つのグラフに重ねて比較できる．
+本研究は、DeepLabCutフレームワーク（Mathis et al., 2018）に着想を得て、超音波舌輪郭抽出向けにカスタマイズされました。
+引用と帰属
+本ツールを研究で使用する場合、以下を引用してください：
+@article{sun2025extraction,
+  title={Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut},
+  author={Sun, J. and Kitamura, T. and Hayashi, R.},
+  journal={Acoustical Science and Technology},
+  pages={1--7},
+  year={2025},
+  doi={10.1250/ast.e24.128}
+}
 
-2. **結果の確認方法**
-   - モデルが正しく輪郭を抽出したかは，**輪郭線が描かれた動画**を見てチェックする．
-   - 動画で輪郭が舌の形に沿っていれば，CSVデータの座標も信頼できる．
+プロジェクトの詳細は、公式リポジトリ（https://github.com/deeplabcut-ultrasound、実際のリポジトリURLに置き換え）でも確認できます。
+インストール
+以下の手順で、WindowsまたはMacにDeepLabCut-Ultrasoundをインストールしてください。
+依存関係
 
- **モデルの学習データ**
- 
-このモデルは以下のようなデータで作られている：
-- **データ量**：4,821フレーム．
-- **データの種類**：
-  - 2種類の超音波装置（GE Healthcareとトリプルエー）を用いる．
-  - アジア系と欧米系の話者の舌の動きの動画を含む．
-- **学習に使ったパソコン**：
-  - MSIのノートPC（GPU：NVIDIA GeForce RTX 3060）で約10時間かかった．
-  - もっと高性能なGPUなら学習がもっと速くなる．
-- **学習回数**：103万回（モデルがデータを繰り返し学習した回数）．
+Miniconda（Python環境管理ツール）
+DeepLabCut（GUI対応、推奨バージョン: 2.3.9）
+TensorFlow（Mac: 2.10.0、Windows GPU: tensorflow_gpu==2.10.0）
+OpenCV（Macのみ必須）
+CUDA Toolkit（Windows GPU使用の場合、推奨バージョン: 11.8.0）
+cuDNN（Windows GPU使用の場合、推奨バージョン: 8.8.0）
+NVIDIAドライバー（Windows GPU使用の場合、任意）
 
- **研究で使う場合**
- 
-論文や研究でこのモデルを使うなら，以下を引用する：
-> J.Sun, T.Kitamura, and R.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).  
-> https://doi.org/10.1250/ast.e24.128
+注: GPUがない場合、TensorFlow-GPU、CUDA Toolkit、cuDNN、NVIDIAドライバーのインストールは不要です。
+Windowsでのインストール手順
+Anaconda Promptで以下のコマンドを順に実行します。
+conda create -n deeplabcut python=3.10 -y
+conda activate deeplabcut
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+conda config --show channels
+pip install deeplabcut[gui]==2.3.9
+pip install tensorflow_gpu==2.10.0
+conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
+python -m deeplabcut
 
- **対応するパソコン**
-- **Windows**と**Mac**で使える．
-- **GPU（GPUとは「Graphics Processing Unit」の略称で，パソコンで処理した画像などを画面へ描写するために使われる画像処理装置のパーツのこと）**：
-  - なくても動くが，GPUがあると処理が速い．
-  - GPUがあれば，動画の処理がスムーズに進む．
+インストール失敗時の対応:インストールが失敗した場合、10～12行目のコマンドを再実行してください：
+conda activate deeplabcut
+pip install "numpy<2"
+python -m deeplabcut
 
- **準備：必要なソフトウェアのインストール**
- 
-モデルを使う前に，以下のソフトをパソコンにインストールする：
+再起動（必要に応じて）:
+conda activate deeplabcut
+python -m deeplabcut
 
-1. **Miniconda**  
-   - Pythonを簡単に管理するツール．
-   - インストール：https://docs.anaconda.com/miniconda/
-   - サイトからダウンロードし，画面の指示に従ってインストールする．
+Macでのインストール手順
+ターミナルで以下のコマンドを順に実行します。
+conda create -n deeplabcut python=3.10 -y
+conda activate deeplabcut
+conda install -c conda-forge opencv -y
+conda install -c conda-forge tensorflow=2.10.0 -y
+conda install -c conda-forge deeplabcut -y
+pip install deeplabcut[gui]
 
-2. **Nvidiaドライバー**（GPUを使う場合のみ）
-   - GPUを使うなら，Nvidiaのドライバーをインストールする．
-   - インストール：https://www.nvidia.com/Download/index.aspx?lang=en-us
-   - 自分のGPUに合うドライバーを選ぶ．
+注: 上記の pip install deeplabcut[gui] が失敗した場合、以下を試してください：
+pip install 'deeplabcut[gui]'
 
-3. **CUDA Toolkit**（GPUを使う場合のみ）
-   - GPUで高速処理するためのツール．
-   - インストール：https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local
-   - Windowsならバージョン11を選んでインストールする．
+起動:
+python -m deeplabcut
 
-※ GPUがない場合は，MinicondaだけでOK！
+再起動（必要に応じて）:
+conda activate deeplabcut
+python -m deeplabcut
 
- **処理速度の違い**
-- **GPUあり**（例：NVIDIA GeForce RTX 3060）：
-  - 1秒に200フレーム以上処理できる（かなり速い！）．
-  - 一本や複数の動画もスムーズに処理できる．
-  - 短い動画（例：1秒）も長い動画（例：1時間）も処理できる．
-- **GPUなし（CPUのみ）**：
-  - 1秒に10～20フレーム程度（少し遅い）．
-  - 短い動画なら十分使える．
+注意事項
 
- **対応する動画のサイズ**
-このモデルは以下のサイズの超音波動画専用：
-- **幅320ピクセル × 高さ240ピクセル**
-- このサイズでないと，正確に輪郭を抽出できないので注意！
+GPUの有無: Macでは通常CPUを使用（M1/M2チップの場合、TensorFlowが最適化される）。WindowsでGPUを使用する場合、NVIDIAドライバーを別途インストール（https://www.nvidia.com/Download/index.aspx）。
+動画サイズ: 320x240ピクセルの超音波動画専用。
+依存関係の互換性: Python 3.10、TensorFlow 2.10.0、CUDA 11.8.0（Windowsのみ）、cuDNN 8.8.0（Windowsのみ）に従い、互換性を確保。
 
- **舌の輪郭の抽出方法**
-- 舌の輪郭を抽出するため，**11個のポイント**（点）を使う．
-- これらの点は，舌の形を正確に捉えられるよう，舌の輪郭に沿って配置される．
-- **ポイント：等間隔に配置しない！**
-  - 等間隔だと，正確な形を捉えるのに30点以上必要になる．
-  - 点が多いと学習データの作成や，学習に時間がかかる．
-  - 11点で効率的かつ正確に舌の形を還元できるように工夫されている．
+データの準備
 
- **モデルの使い方：ステップごとの説明**
- 
-超音波動画から舌の輪郭を抽出する手順を説明する！
+動画形式: MP4、AVI、MKV、MOV
+動画サイズ: 320x240ピクセル（正確な輪郭抽出に必須）
+舌の向き: 動画内で舌先が右側、舌根が左側。
 
-# **1. DeepLabCutを起動する**
-- **Windows**：
-  1. 「Anaconda Prompt (miniconda3)」を検索して開く．
-  2. 以下のコマンドを順に入力：
-     ```
-     conda activate deeplabcut
-     python -m deeplabcut
-     ```
-- **Mac**：
-  1. 「ターミナル」を開く．
-  2. 上と同じコマンドを入力．
+デモ用のサンプル超音波動画は、リポジトリの demo フォルダに含まれています。
+使い方ガイド
+DeepLabCut-Ultrasound の使い始め
 
-これで，DeepLabCutの操作画面（ウィンドウ）が開く．
+DeepLabCutの起動:
+conda activate deeplabcut
+python -m deeplabcut
 
-# **2. プロジェクトを読み込む**
-1. 操作画面が開いたら，「Load Project」ボタンをクリック．
-2. DLCモデルのフォルダにある「**config.yaml**」ファイルを選ぶ．
-   - このファイルは，モデルの設定が書かれた重要なファイル．
 
-# **3. 動画を解析する（輪郭を抽出）**
-1. 操作画面で「Analyze videos」ボタンをクリック．
-2. 「Select videos」をクリックし，解析したい動画を選ぶ．
-   - 対応形式：MP4，AVI，MKV，MOV．
-   - **注意**：動画内で**舌先が右側，舌根が左側**になるようにする．
-3. 以下のチェックボックスにチェックを入れる：
-   - ✅ Save result(s) as csv（結果をCSVで保存）
-   - ✅ Filter predictions（予測を滑らかにする）
-   - ✅ Plot trajectories（舌の動きを描く）
-4. 右下の「Analyze videos」ボタンをクリックして解析を始める．
+プロジェクトの読み込み:
 
-# **4. 輪郭線付き動画を作る**
-1. 操作画面で「Create videos」ボタンをクリック．
-2. 以下のチェックボックスにチェック：
-   - ✅ Plot all bodyparts（すべてのポイントを表示）
-   - ✅ Draw skeleton（ポイントをつなぐ線を描く）
-   - ✅ Use filtered data（滑らかなデータを使う）
-   - ✅ Plot trajectories（舌の動きを描く）
-3. 右下の「Create videos」ボタンをクリックして，輪郭線付き動画を保存する．
+GUIで「Load Project」をクリックし、モデルフォルダ内の config.yaml を選択。
 
-# **5. 結果を確認する**
-- 保存された**輪郭線付き動画**を見て，舌の輪郭が正しく抽出されているか確認する．
-- 輪郭が正しければ，CSVファイル（「filtered」で終わるもの）の座標データを使って分析できる．
 
-# **まとめ**
-- このモデルは，超音波動画から舌の輪郭を簡単に抽出できる便利なツール．
-- WindowsやMacで使え，GPUがあれば処理が速い．
-- 動画サイズ（320×240ピクセル）と舌の向き（舌先が右，舌根が左）に注意．
-- 結果は輪郭線付き動画で確認し，CSVデータで分析できる．
+動画の解析（輪郭抽出）:
 
+「Analyze videos」で動画を選択。
+舌先が右、舌根が左になるように動画を準備。
+チェックボックス：☑ Save result(s) as CSV, ☑ Filter predictions, ☑ Plot trajectories。
+「Analyze videos」をクリック。
+処理速度:
+Windows GPU（例：NVIDIA RTX 3060）: 約200フレーム/秒
+Mac CPU（例：M1/M2）: 約10～20フレーム/秒
+
+
+
+
+輪郭線付き動画の作成:
+
+「Create videos」をクリック。
+チェックボックス：☑ Plot all bodyparts, ☑ Draw skeleton, ☑ Use filtered data, ☑ Plot trajectories。
+「Create videos」をクリック。
+
+
+結果の確認:
+
+輪郭線付き動画で舌の形状を確認。
+「filtered」CSVファイルを使用して分析。
+
+
+
+舌輪郭の抽出方法
+
+舌の輪郭は11個のポイントで追跡。
+ポイントは等間隔ではなく、舌の形状を効率的かつ正確に捉えるよう配置。
+11点で十分な精度を確保し、30点以上必要な従来手法に比べ、学習データ作成や計算時間を削減。
+
+トレーニング済みモデルのダウンロード
+トレーニング済みモデルは こちら（実際のリンクに置き換え）からダウンロード可能です。モデルの学習詳細：
+
+データ量: 4,821フレーム
+使用機器: GE HealthcareおよびTripleA超音波装置
+話者: アジア系および欧米系の話者
+学習環境: MSIノートPC（NVIDIA GeForce RTX 3060 GPU使用）、約10時間で103万回学習。
+
+免責事項
+本ソフトウェアは現状のまま提供され、バグや不具合を含む可能性があります。使用に際し、以下の点をご了承ください：
+
+出力結果は完璧ではなく、生成された動画で輪郭の正確性を確認する必要があります。
+DeepLabCutや依存関係のアップデートにより、ソフトウェアが動作しなくなる可能性があります。
+著者はバグ修正やサポートの義務を負いませんが、バグ報告は歓迎します（下記の連絡先参照）。
+本ツールを使用、改変、または派生研究に利用する場合、著者を引用してください。
+ソフトウェアを再配布せず、最新版を公式リポジトリからダウンロードするよう案内してください。
+著者および関連機関は、ソフトウェアの使用（適切・不適切問わず）による結果に責任を負いません。
+
+DeepLabCut-Ultrasoundをご利用いただき、研究に役立つことを願っています！
+サポートおよび連絡先
+サポートが必要な場合、以下に連絡してください：
+
+J. Sun (email@example.com)
+T. Kitamura (email@example.com)
+R. Hayashi (email@example.com)
+
+参考文献
+[^1]: Mathis, A., et al. (2018). DeepLabCut: markerless pose estimation of user-defined body parts with deep learning. Nature Neuroscience, 21, 1281–1289. https://doi.org/10.1038/s41593-018-0209-y
