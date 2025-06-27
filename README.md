@@ -96,28 +96,28 @@ python -m deeplabcut
    ```  
 
 2. **Load Project**:  
-   - In the GUI, click **Load Project** and select the `config.yaml` file from the `DLC-Model` folder.  
+   - In the GUI, click **`Load Project`** and select the **`config.yaml`** file from the **`DLC-Model`** folder.  
 
 3. **Analyze Videos**:  
-   - Select videos via **Analyze Videos**.  
+   - Select videos via **`Analyze Videos`**.  
    - Verify tongue orientation (tip right, root left).  
    - Enable:  
      ☑ **Save as CSV**  
      ☑ **Filter predictions**  
      ☑ **Plot trajectories**  
-   - Click **Analyze Videos**.  
+   - Click **`Analyze Videos`**.  
    - **Processing Speed**:  
      - GPU (e.g., RTX 3060): ~200 fps  
      - CPU (e.g., M1/M2): ~10–20 fps  
 
 4. **Generate Contour Videos**:  
-   - Click **Create Videos**.  
+   - Click **`Create Videos`**.  
    - Enable:  
      ☑ **Plot all bodyparts**  
      ☑ **Draw skeleton**  
      ☑ **Use filtered data**  
      ☑ **Plot trajectories**  
-   - Click **Create Videos**.  
+   - Click **`Create Videos`**.  
 
 5. **Review Outputs**:  
    - Inspect overlaid contours in the generated videos.  
