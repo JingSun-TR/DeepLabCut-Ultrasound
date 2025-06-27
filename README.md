@@ -79,7 +79,7 @@ python -m deeplabcut
 - **Speakers**: Asian and Western participants  
 - **Training Hardware**: MSI laptop (NVIDIA GeForce RTX 3060 GPU), trained for ~1.03 million iterations (10 hours).  
 
-### Data Preparation  
+### Preparing your Data
 - **Supported Formats**: MP4, AVI, MKV, MOV  
 - **Resolution**: 320×240 pixels (required for accuracy)  
 - **Orientation**: Tongue tip on the right, root on the left.  
@@ -88,8 +88,8 @@ python -m deeplabcut
 ### Keypoints  
 - The contour is defined by **11 unequally spaced keypoints** optimized for shape accuracy.  
 
-### Usage Guide  
-1. **Launch DeepLabCut**:  
+### Start Guide  
+1. **Start Up DeepLabCut**:  
    ```bash
    conda activate deeplabcut
    python -m deeplabcut
