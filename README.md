@@ -40,14 +40,14 @@ pip install deeplabcut[gui]==2.3.9
 pip install tensorflow_gpu==2.10.0
 conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
 ```
-**起動**
-```bash
-python -m deeplabcut
-```
 *注*: GPUがない場合、以下の2行のコマンドは不要です。
 ```bash
 pip install tensorflow_gpu==2.10.0
 conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
+```
+**起動**
+```bash
+python -m deeplabcut
 ```
 
 **インストール失敗時の対応**:
