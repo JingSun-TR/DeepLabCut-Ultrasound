@@ -100,7 +100,7 @@ python -m deeplabcut
 
 3. **Analyze Videos**:  
    - Select videos via **`Analyze Videos`**.  
-   - Verify tongue orientation (tip right, root left).  
+   - Verify tongue orientation (right: tongue tip, left: tongue root ).  
    - Enable:  
      ☑ **Save as CSV**  
      ☑ **Filter predictions**  
