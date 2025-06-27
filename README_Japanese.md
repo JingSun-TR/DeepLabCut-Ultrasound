@@ -95,7 +95,7 @@ python -m deeplabcut
 
 デモ用のサンプル超音波動画は、保存場所の `demo` フォルダに含まれています。
 
-## 使い方について（ [こちら](https://drive.google.com/drive/folders/1SUVAYX0U0cxX1xOo1ay-zBNgKHP4Ofap?usp=sharing)の動画でも使い方を確認可能です。）
+## 使い方について（ [こちら](https://drive.google.com/drive/folders/1SUVAYX0U0cxX1xOo1ay-zBNgKHP4Ofap?usp=sharing)の動画でも使い方を確認可能）
 
 ### DeepLabCut-Ultrasound の使い始め
 
