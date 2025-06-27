@@ -127,7 +127,7 @@ python -m deeplabcut
    - 「**Analyze videos**」で動画を選択。
    - 舌先が右、舌根が左になるように動画を準備。
    - チェックボックス：☑ **Save result(s) as** CSV, ☑ **Filter predictions**, ☑ **Plot trajectories**。
-   - 「**Analyze videos**」をクリック。
+   - 操作画面の右下の「**Analyze videos**」をクリック。
    - **処理速度**:
      - Windows GPU（例：NVIDIA RTX 3060）: 約200フレーム/秒
      - Windows/Mac CPU（例：M1/M2）: 約10～20フレーム/秒
@@ -135,7 +135,7 @@ python -m deeplabcut
 4. **輪郭線付き動画の作成**:
    - 「**Create videos**」をクリック。
    - チェックボックス：☑ **Plot all bodyparts**, ☑ **Draw skeleton**, ☑ **Use filtered data**, ☑ **Plot trajectories**。
-   - 「**Create videos**」をクリック。
+   - 操作画面の右下の「**Create videos**」をクリック。
 
 5. **結果の確認**:
    - 輪郭線付き動画で舌の形状を確認。
