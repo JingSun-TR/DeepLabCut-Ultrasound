@@ -123,7 +123,7 @@ DLC-Modelをダウンロードしてください。モデルの学習詳細：
    ```
 
 2. **プロジェクトの読み込み**:
-   - GUIで「**`Load Project`**」をクリックし、**`DLC``-``Model`**フォルダ内の **`config.yaml`** を選択。
+   - GUIで「**`Load Project`**」をクリックし、`DLC-Model`フォルダ内の **`config.yaml`** を選択。
 
 3. **動画の解析（輪郭抽出）**:
    - 「**`Analyze videos`**」で動画を選択。
