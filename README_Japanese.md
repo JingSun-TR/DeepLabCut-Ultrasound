@@ -121,7 +121,7 @@ python -m deeplabcut
    ```
 
 2. **プロジェクトの読み込み**:
-   - GUIで「**Load Project**」をクリックし、モデルフォルダ内の **`config.yaml`** を選択。
+   - GUI（DLCの操作画面）で「**Load Project**」をクリックし、モデルフォルダ内の **`config.yaml`** を選択。
 
 3. **動画の解析（輪郭抽出）**:
    - 「**Analyze videos**」で動画を選択。
