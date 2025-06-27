@@ -1,5 +1,8 @@
 # DeepLabCut-Ultrasound
 
+[![サービス紹介動画](https://user-images.githubusercontent.com/84756197/173222007-3aefa245-4c0e-45e6-9855-91f0e3be89ed.png)](youtubehttps://youtu.be/4pZpJK13p2I)
+
+
 ## 本モデルの概要
 - 本モデルは、DeepLabCut（深層学習を用いて、正確なトラッキングをGUIで可能にするツール）を用いて超音波動画から舌の輪郭を自動抽出するツールです。音声研究における舌の動きの分析を効率化するために開発され、WindowsおよびMacで動作します。
 - 抽出された輪郭座標はCSV形式で出力されます。抽出された輪郭を視覚的に確認するための輪郭線付き動画も生成されます。
