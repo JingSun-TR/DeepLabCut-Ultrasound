@@ -11,7 +11,7 @@
 > J.Sun, T.Kitamura, and R.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).  
 > https://doi.org/10.1250/ast.e24.128
 
-## インストール
+## DeepLabCutを動作するためのソフトウェアのインストール
 ### Windowsでのインストール手順
 1. **Miniconda**  
    - インストール：https://docs.anaconda.com/miniconda/
