@@ -95,6 +95,8 @@ python -m deeplabcut
 
 デモ用のサンプル超音波動画は、保存場所の  [demo](https://example.com/deeplabcut-ultrasound-model](https://example.com/deeplabcut-ultrasound-model](https://drive.google.com/drive/folders/1hYzPtkS1NvW67NTrU19T1dnXV5VXVT3C?usp=sharing)フォルダに含まれています。
 
+は [demo]([https://example.com/deeplabcut-ultrasound-model](https://example.com/deeplabcut-ultrasound-model](https://example.com/deeplabcut-ultrasound-model](https://drive.google.com/drive/folders/1hYzPtkS1NvW67NTrU19T1dnXV5VXVT3C?usp=sharing))（実際のリンクに置き換え）
+
 ## 使い方について
 
 ### DeepLabCut-Ultrasound の使い始め
