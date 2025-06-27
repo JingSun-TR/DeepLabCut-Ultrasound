@@ -157,6 +157,6 @@ python -m deeplabcut
 
 サポートが必要な場合、以下に連絡してください：
 - J. Sun ([jsunsang901126@gmail.com](jsunsang901126@gmail.com))
-- T.Kitamura ([t-kitamu@konan-u.ac.jp](t-kitamu@konan-u.ac.jp))
-- R.Hayashi ([rhayashi@kobe-u.ac.jp](rhayashi@kobe-u.ac.jp))
+- T. Kitamura ([t-kitamu@konan-u.ac.jp](t-kitamu@konan-u.ac.jp))
+- R. Hayashi ([rhayashi@kobe-u.ac.jp](rhayashi@kobe-u.ac.jp))
 
