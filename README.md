@@ -3,8 +3,7 @@
 ## Overview  
 This model is a DeepLabCut-based tool (a deep learning framework with a GUI for precise markerless pose estimation) designed to automatically extract tongue contours from ultrasound videos. It streamlines the analysis of tongue movements in speech research and is compatible with both Windows and macOS.  
 
-The extracted contour coordinates are output in CSV format, and videos with overlaid contour lines are generated for visual verification. The model has been trained on data from multiple ultrasound devices and speakers. For methodological details, refer to the accompanying paper:  
-[https://doi.org/10.1250/ast.e24.128](https://doi.org/10.1250/ast.e24.128)  
+The extracted contour coordinates are output in CSV format, and videos with overlaid contour lines are generated for visual verification. The model has been trained on data from multiple ultrasound devices and speakers. For methodological details, refer to the accompanying [paper](https://doi.org/10.1250/ast.e24.128):  
 
 ## Citation  
 When using this model in publications or research, please cite:  
