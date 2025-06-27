@@ -11,20 +11,11 @@
 > J. Sun, T. Kitamura, and R. Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut," *Acoustical Science and Technology*, 1-7 (2025).  
 > [https://doi.org/10.1250/ast.e24.128](https://doi.org/10.1250/ast.e24.128)
 
-### 引用と帰属
-
-本ツールを研究で使用する場合、以下を引用してください：
-
-```
-@article{sun2025extraction,
-  title={Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut},
-  author={Sun, J. and Kitamura, T. and Hayashi, R.},
-  journal={Acoustical Science and Technology},
-  pages={1--7},
-  year={2025},
-  doi={10.1250/ast.e24.128}
-}
-```
+ **研究で使う場合**
+ 
+論文や研究でこのモデルを使うなら，以下を引用する：
+> J.Sun, T.Kitamura, and R.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).  
+> https://doi.org/10.1250/ast.e24.128
 
 ## インストール
 
