@@ -106,11 +106,10 @@ DLC-Modelをダウンロードしてください。モデルの学習詳細：
 - **動画サイズ**: 320x240ピクセル（正確な輪郭抽出に必須）
 - **舌の向き**: 動画内で舌先が右側、舌根が左側。
 
-**デモ用のサンプル超音波動画**は [こちら](https://drive.google.com/drive/folders/1hYzPtkS1NvW67NTrU19T1dnXV5VXVT3C?usp=sharing)からダウンロード可能です。
+**デモ用のサンプル超音波動画をdemoから入手できます**。
 
 
-
-### 本モデルの使い始め（動画による解説は[こちら](https://drive.google.com/file/d/1axaQffUmaZk3J0bc2H_LCqMNaJGUw62B/view?usp=sharing)）
+### 本モデルの使い始め（動画による解説はyoutubehttps://youtu.be/4pZpJK13p2I）
 
 1. **DeepLabCutの起動**:
 
@@ -120,13 +119,13 @@ DLC-Modelをダウンロードしてください。モデルの学習詳細：
    ```
 
 2. **プロジェクトの読み込み**:
-   - GUIで「**Load Project**」をクリックし、モデルフォルダ内の **`config.yaml`** を選択。
+   - GUIで「**Load Project**」をクリックし、DLC-Modelフォルダ内の **`config.yaml`** を選択。
 
 3. **動画の解析（輪郭抽出）**:
    - 「**Analyze videos**」で動画を選択。
    - 舌先が右、舌根が左になるように動画を準備。
    - チェックボックス：☑ **Save result(s) as** CSV, ☑ **Filter predictions**, ☑ **Plot trajectories**。
-   - 「**Analyze videos**」をクリック。
+   - 画面の右下の「**Analyze videos**」をクリック。
    - **処理速度**:
      - Windows GPU（例：NVIDIA RTX 3060）: 約200フレーム/秒
      - Windows/Mac CPU（例：M1/M2）: 約10～20フレーム/秒
@@ -134,10 +133,10 @@ DLC-Modelをダウンロードしてください。モデルの学習詳細：
 4. **輪郭線付き動画の作成**:
    - 「**Create videos**」をクリック。
    - チェックボックス：☑ **Plot all bodyparts**, ☑ **Draw skeleton**, ☑ **Use filtered data**, ☑ **Plot trajectories**。
-   - 「**Create videos**」をクリック。
+   - 画面の右下の「**Create videos**」をクリック。
 
 5. **結果の確認**:
-   - 輪郭線付き動画で舌の形状を確認。
+   - 輪郭線付き動画で舌の形状を確認（分析結果は元の動画と同じフォルダに保存されます）。
    - 「**・・・filtered**」CSVファイルを使用して分析。
 
 
@@ -158,5 +157,4 @@ DLC-Modelをダウンロードしてください。モデルの学習詳細：
 サポートが必要な場合、以下に連絡してください：
 - J. Sun ([jsunsang901126@gmail.com](jsunsang901126@gmail.com))
 - T. Kitamura ([t-kitamu@konan-u.ac.jp](t-kitamu@konan-u.ac.jp))
-- R. Hayashi ([rhayashi@kobe-u.ac.jp](rhayashi@kobe-u.ac.jp))
 
