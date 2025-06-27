@@ -1,4 +1,5 @@
 # DeepLabCut-Ultrasound  
+![輪郭線付き動画](https://github.com/user-attachments/assets/efbfdc63-50a8-4d36-9e76-ae6c50319f64)
 
 ## About DeepLabCut-Ultrasound 
 This model is a DeepLabCut-based tool (a deep learning framework with a GUI for precise markerless pose estimation) designed to automatically extract tongue contours from ultrasound videos. It streamlines the analysis of tongue movements in speech research and is compatible with both Windows and macOS.  
