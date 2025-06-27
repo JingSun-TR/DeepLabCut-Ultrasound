@@ -1,4 +1,10 @@
 # DeepLabCut-Ultrasound
+
+_(The video above was made in [**AAA**](http://www.articulateinstruments.com/downloads/), software for speech articulatory analysis and recording by **Articulate Instruments**, using the pose-estimation models in this project trained using [**DeepLabCut**](https://github.com/DeepLabCut/DeepLabCut/) ([Mathis, A.](https://scholar.google.co.uk/citations?user=Y1xCzE0AAAAJ), [Mamidanna, P.](https://scholar.google.co.uk/citations?user=5x1hXY8AAAAJ), [Cury, K.M.](https://scholar.google.co.uk/citations?user=KpSNbF4AAAAJ) et al.). The video below was created using DeepLabCut's built-in video export)._
+
+[![Speaker DF in the test set, included with this project](Installation_Instructions/Other_Files/Demo/demo2.gif)](Installation_Instructions/Other_Files/Demo/demo2.mp4?raw=true)
+
+
 ## 本モデルの概要
 - 本モデルは、DeepLabCut（深層学習を用いて、正確なトラッキングをGUIで可能にするツール）を用いて超音波動画から舌の輪郭を自動抽出するツールです。音声研究における舌の動きの分析を効率化するために開発され、WindowsおよびMacで動作します。
 - 抽出された輪郭座標はCSV形式で出力される。2つのCSVファイルが出力されますが、分析にはファイル名が「**filtered**」で終わる方を使用してください。また、抽出された輪郭を視覚的に確認するための輪郭線付き動画も生成されます。
