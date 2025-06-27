@@ -6,7 +6,7 @@
 
 - このモデルは、DeepLabCutを基盤として構築され、多様な超音波装置や話者データを用いて学習されています。詳細な手法については、 [こちら](https://doi.org/10.1250/ast.e24.128)の論文を参照してください。
 
-**研究で使う場合**
+## 研究で使う場合
 論文や研究でこのモデルを使うなら，以下を引用する：
 > J.Sun, T.Kitamura, and R.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).  
 > https://doi.org/10.1250/ast.e24.128
