@@ -1,17 +1,15 @@
 # DeepLabCut-Ultrasound
 
-**DeepLabCut-Ultrasound** は、DeepLabCut（深層学習フレームワーク）を用いて超音波動画から舌の輪郭を自動抽出するツールです。音声研究における舌の動きの分析を効率化するために開発され、WindowsおよびMacで動作します。抽出された輪郭座標はCSV形式で出力され、言語研究に活用できます。
+**DeepLabCut-Ultrasound** は、DeepLabCut（深層学習を用いて、正確なトラッキングをGUIで可能にするツール）を用いて超音波動画から舌の輪郭を自動抽出するツールです。音声研究における舌の動きの分析を効率化するために開発され、WindowsおよびMacで動作します。抽出された輪郭座標はCSV形式で出力され、言語研究に活用できます。
 
 ## DeepLabCut-Ultrasound について
 
-本ツールは、超音波動画から舌の輪郭を抽出し、座標データをCSV形式で保存します。2つのCSVファイルが出力されますが、分析には**「filtered」**と名付けられたファイルを使用してください。また、抽出された輪郭を視覚的に確認するための輪郭線付き動画も生成されます。
+本ツールは、超音波動画から舌の輪郭を抽出し、座標データをCSV形式で保存します。2つのCSVファイルが出力されますが、分析にはファイル名が**filtered**で終わる方を使用してください。また、抽出された輪郭を視覚的に確認するための輪郭線付き動画も生成されます。
 
 このモデルは、DeepLabCutを基盤として構築され、多様な超音波装置や話者データを用いて学習されています。詳細な手法については、以下の論文を参照してください：
 
 > J. Sun, T. Kitamura, and R. Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut," *Acoustical Science and Technology*, 1-7 (2025).  
 > [https://doi.org/10.1250/ast.e24.128](https://doi.org/10.1250/ast.e24.128)
-
-本研究は、DeepLabCutフレームワーク（[Mathis et al., 2018](https://www.nature.com/articles/s41593-018-0209-y)）に着想を得て、超音波舌輪郭抽出向けにカスタマイズされました。
 
 ### 引用と帰属
 
@@ -28,25 +26,28 @@
 }
 ```
 
-プロジェクトの詳細は、公式リポジトリ（[https://github.com/deeplabcut-ultrasound](https://github.com/deeplabcut-ultrasound)、実際のリポジトリURLに置き換え）でも確認できます。
-
 ## インストール
 
 以下の手順で、WindowsまたはMacにDeepLabCut-Ultrasoundをインストールしてください。
 
-### 依存関係
-
-- **Miniconda**（Python環境管理ツール）
-- **DeepLabCut**（GUI対応、推奨バージョン: 2.3.9）
-- **TensorFlow**（Mac: 2.10.0、Windows GPU: tensorflow_gpu==2.10.0）
-- **OpenCV**（Macのみ必須）
-- **CUDA Toolkit**（Windows GPU使用の場合、推奨バージョン: 11.8.0）
-- **cuDNN**（Windows GPU使用の場合、推奨バージョン: 8.8.0）
-- **NVIDIAドライバー**（Windows GPU使用の場合、任意）
-
-*注*: GPUがない場合、TensorFlow-GPU、CUDA Toolkit、cuDNN、NVIDIAドライバーのインストールは不要です。
 
 ### Windowsでのインストール手順
+1. **Miniconda**  
+   - インストール：https://docs.anaconda.com/miniconda/
+   - サイトからダウンロードし，画面の指示に従ってインストールする．
+
+2. **Nvidiaドライバー**（GPUを使う場合のみ）
+   - GPUを使うなら，Nvidiaのドライバーをインストールする．
+   - インストール：https://www.nvidia.com/Download/index.aspx?lang=en-us
+   - 自分のGPUに合うドライバーを選ぶ．
+
+3. **CUDA Toolkit**（GPUを使う場合のみ）
+   - GPUで高速処理するためのツール．
+   - インストール：https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local
+   - Windowsならバージョン11を選んでインストールする．
+
+*注*: GPUがない場合は，MinicondaだけでOK！
+
 
 Anaconda Promptで以下のコマンドを順に実行します。
 
@@ -60,6 +61,11 @@ pip install tensorflow_gpu==2.10.0
 conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
 python -m deeplabcut
 ```
+*注*: GPUがない場合、この2行のコマンドは不要です。
+```bash
+pip install tensorflow_gpu==2.10.0
+conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
+```
 
 **インストール失敗時の対応**:
 インストールが失敗した場合、以下のコマンドを再実行してください：
@@ -70,14 +76,19 @@ pip install "numpy<2"
 python -m deeplabcut
 ```
 
-**再起動**（必要に応じて）:
-
+**DLCの起動**（必要に応じて）:
+DLCの操作画面を閉じた後に、もう一度起動する場合、以下のコマンドを再実行してください：
 ```bash
 conda activate deeplabcut
 python -m deeplabcut
 ```
 
 ### Macでのインストール手順
+
+Python 3.12をインストール![image](https://github.com/user-attachments/assets/22889b10-5ad3-4085-af4b-89771526ddfa)
+https://www.python.org/downloads/macos/
+![image](https://github.com/user-attachments/assets/860125de-7d4c-4332-8f3b-d280022e3493)
+
 
 ターミナルで以下のコマンドを順に実行します。
 
