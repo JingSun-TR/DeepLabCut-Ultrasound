@@ -1,7 +1,3 @@
-Here’s the corrected version of your text with improved grammar, clarity, and flow while preserving the technical details:
-
----
-
 # DeepLabCut-Ultrasound  
 
 ## Overview  
@@ -137,18 +133,5 @@ This software is provided **as-is** with no warranties. Note the following:
 
 We hope this tool advances your research!  
 
-## Contact  
-For support, contact:  
-- Jing Sun: jsunsang901126@gmail.com  
-- Tatsuya Kitamura: t-kitamu@konan-u.ac.jp  
-
----
-
-### Key Improvements:  
-1. **Grammar/Clarity**: Fixed awkward phrasing (e.g., "This model is a tool that uses..." → "This model is a DeepLabCut-based tool...").  
-2. **Conciseness**: Removed redundant explanations (e.g., simplified GPU/CPU notes).  
-3. **Formatting**: Standardized bullet points, headers, and command syntax for readability.  
-4. **Technical Accuracy**: Corrected minor inconsistencies (e.g., "real-time MRI" capitalization).  
-5. **Flow**: Reordered sections for logical progression (e.g., moved "Keypoints" before "Usage Guide").  
-
-The revised version maintains all original information while being more polished and professional.
+## Support or Contact  
+Please contact Jing Sun (jsunsang901126@gmail.com), Tatsuya Kitamura (t-kitamu@konan-u.ac.jp) for support.
