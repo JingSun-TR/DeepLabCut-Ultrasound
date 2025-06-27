@@ -91,7 +91,8 @@ python -m deeplabcut
 - 舌の輪郭は**11個のキーポイント**で抽出します。
 - キーポイントは等間隔ではなく、舌の形状を効率的かつ正確に捉えるよう配置しています。
 
-## トレーニング済みモデルのダウンロード
+## 超音波動画の解析方法について
+### トレーニング済みモデルのダウンロード
 
 トレーニング済みモデルは [こちら](https://drive.google.com/drive/folders/1ShHfXOWP--4gdrusy9THTtJ6AP5iy2ig?usp=sharing)からダウンロード可能です。モデルの学習詳細：
 - **データ量**: 4,821フレーム
@@ -99,7 +100,7 @@ python -m deeplabcut
 - **話者**: アジア系および欧米系の話者
 - **学習環境**: MSIノートPC（NVIDIA GeForce RTX 3060 GPU使用）、約10時間で103万回学習。
 
-## データの準備
+### データの準備
 
 - **動画形式**: **MP4**、AVI、MKV、MOV
 - **動画サイズ**: 320x240ピクセル（正確な輪郭抽出に必須）
@@ -107,7 +108,7 @@ python -m deeplabcut
 
 **デモ用のサンプル超音波動画**は [こちら](https://drive.google.com/drive/folders/1hYzPtkS1NvW67NTrU19T1dnXV5VXVT3C?usp=sharing)からダウンロード可能です。
 
-## 超音波動画の解析方法について
+
 
 ### 本モデルの使い始め（動画による解説は[こちら](https://drive.google.com/file/d/1axaQffUmaZk3J0bc2H_LCqMNaJGUw62B/view?usp=sharing)）
 
