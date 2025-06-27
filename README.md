@@ -96,7 +96,7 @@ python -m deeplabcut
    ```  
 
 2. **Load Project**:  
-   - In the GUI, click **Load Project** and select the `config.yaml` file from the DLC-Model folder.  
+   - In the GUI, click **Load Project** and select the `config.yaml` file from the `DLC-Model` folder.  
 
 3. **Analyze Videos**:  
    - Select videos via **Analyze Videos**.  
