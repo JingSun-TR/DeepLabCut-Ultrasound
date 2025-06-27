@@ -1,6 +1,6 @@
 # DeepLabCut-Ultrasound
 
-[![舌輪郭抽出の解説動画](https://github.com/user-attachments/assets/efbfdc63-50a8-4d36-9e76-ae6c50319f64)]
+![舌輪郭抽出の解説動画](https://github.com/user-attachments/assets/efbfdc63-50a8-4d36-9e76-ae6c50319f64)
 
 
 ## 本モデルの概要
