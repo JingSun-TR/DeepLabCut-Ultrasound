@@ -97,9 +97,9 @@ python -m deeplabcut
 
 デモ用のサンプル超音波動画は [こちら](https://drive.google.com/drive/folders/1hYzPtkS1NvW67NTrU19T1dnXV5VXVT3C?usp=sharing)からダウンロード可能です。
 
-## 使い方について
+## 超音波動画の解析方法について
 
-### DeepLabCut-Ultrasound の使い始め
+### 本モデルの使い始め（解析方法は[こちら](https://drive.google.com/file/d/1axaQffUmaZk3J0bc2H_LCqMNaJGUw62B/view?usp=sharing)の動画でも確認可能）
 
 1. **DeepLabCutの起動**:
 
