@@ -48,7 +48,7 @@ pip install tensorflow_gpu==2.10.0
 conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
 ```
 
-**インストール失敗時の対応**:
+### インストール失敗時の対応:
 インストールが失敗した場合、以下のコマンドを再実行してください：
 
 ```bash
