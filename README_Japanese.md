@@ -135,7 +135,7 @@ python -m deeplabcut
 
 ## トレーニング済みモデルのダウンロード
 
-トレーニング済みモデルは [こちら](https://example.com/deeplabcut-ultrasound-model)（実際のリンクに置き換え）からダウンロード可能です。モデルの学習詳細：
+トレーニング済みモデルは [こちら](https://example.com/deeplabcut-ultrasound-model)からダウンロード可能です。モデルの学習詳細：
 - **データ量**: 4,821フレーム
 - **使用機器**: GE HealthcareおよびTripleA超音波装置
 - **話者**: アジア系および欧米系の話者
