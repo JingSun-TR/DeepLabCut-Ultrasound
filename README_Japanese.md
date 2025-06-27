@@ -20,11 +20,7 @@
 2. **Nvidiaドライバー**（GPUを使う場合のみ）
    - GPUを使うなら，Nvidiaのドライバーをインストールする．
    - インストール：https://www.nvidia.com/Download/index.aspx?lang=en-us
-   - 自分のGPUに合うドライバーを選ぶ．
-   - -「Windowsキー＋R」を押して「dxdiag」と入力して、確認してください。
-   ```bash
-      dxdiag
-   ```
+   - 自分のGPUに合うドライバーを選ぶ（「Windowsキー＋R」を押して「dxdiag」と入力して、確認してください）。
 
 3. **CUDA Toolkit**（GPUを使う場合のみ）
    - GPUで高速処理するためのツール．
