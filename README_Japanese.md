@@ -157,6 +157,6 @@ DeepLabCut-Ultrasoundをご利用いただき、研究に役立つことを願�
 
 サポートが必要な場合、以下に連絡してください：
 - J. Sun ([email@example.com](jsunsang901126@gmail.com))
-- T.Kitamura  ([email@example.com](t-kitamu@konan-u.ac.jp ))
-- R.Hayashi ([email@example.com](rhayashi@kobe-u.ac.jp))
+- T. Kitamura  ([email@example.com](t-kitamu@konan-u.ac.jp ))
+- R. Hayashi ([email@example.com](rhayashi@kobe-u.ac.jp))
 
