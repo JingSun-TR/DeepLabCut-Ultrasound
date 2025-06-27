@@ -1,6 +1,6 @@
 # DeepLabCut-Ultrasound
 
-[![サービス紹介動画](https://user-images.githubusercontent.com/84756197/173222007-3aefa245-4c0e-45e6-9855-91f0e3be89ed.png)](https://www.youtube.com/watch?v=4pZpJK13p2I)
+[![舌輪郭抽出の解説動画](https://github.com/user-attachments/assets/695f490d-e4dc-4744-832a-8a713d359c29)](https://www.youtube.com/watch?v=4pZpJK13p2I)
 
 
 
