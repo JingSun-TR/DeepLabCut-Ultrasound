@@ -25,7 +25,7 @@ When using this model in publications or research, please cite:
 
 *Note*: Miniconda alone suffices if not using a GPU.  
 
-4. Run these commands in **Anaconda Prompt**:  
+4. Run these commands in **`Anaconda Prompt`**:  
 ```bash
 conda create -n deeplabcut python=3.10 -y
 conda activate deeplabcut
@@ -56,7 +56,7 @@ python -m deeplabcut
 2. **Miniconda**  
    - Install from: [https://docs.anaconda.com/miniconda/](https://docs.anaconda.com/miniconda/)  
 
-3. Run these commands in **Terminal**:  
+3. Run these commands in **`Terminal`**:  
 ```bash
 conda create -n deeplabcut python=3.10 -y
 conda activate deeplabcut
