@@ -94,7 +94,7 @@ python -m deeplabcut
 ## 超音波動画の解析方法について
 ### トレーニング済みモデルのダウンロード
 
-トレーニング済みモデルは [こちら](https://drive.google.com/drive/folders/1ShHfXOWP--4gdrusy9THTtJ6AP5iy2ig?usp=sharing)からダウンロード可能です。モデルの学習詳細：
+DLC-Modelをダウンロードしてください。モデルの学習詳細：
 - **データ量**: 4,821フレーム
 - **使用機器**: GE HealthcareおよびAAA超音波装置
 - **話者**: アジア系および欧米系の話者
