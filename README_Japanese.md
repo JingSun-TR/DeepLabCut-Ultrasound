@@ -6,7 +6,7 @@
 
 本ツールは、超音波動画から舌の輪郭を抽出し、座標データをCSV形式で保存します。2つのCSVファイルが出力されますが、分析にはファイル名が**filtered**で終わる方を使用してください。また、抽出された輪郭を視覚的に確認するための輪郭線付き動画も生成されます。
 
-このモデルは、DeepLabCutを基盤として構築され、多様な超音波装置や話者データを用いて学習されています。詳細な手法については、以下の論文を参照してください：
+このモデルは、DeepLabCutを基盤として構築され、多様な超音波装置や話者データを用いて学習されています。詳細な手法については、以下の論文を参照してください。
 **論文や研究でこのモデルを使うなら，以下を引用する：**
 > J.Sun, T.Kitamura, and R.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).  
 > https://doi.org/10.1250/ast.e24.128
