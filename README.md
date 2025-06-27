@@ -1,35 +1,35 @@
 # DeepLabCut-Ultrasound
 
-## 本モデルの概要
-- 本モデルは、DeepLabCut（深層学習を用いて、正確なトラッキングをGUIで可能にするツール）を用いて超音波動画から舌の輪郭を自動抽出するツールです。音声研究における舌の動きの分析を効率化するために開発され、WindowsおよびMacで動作します。
-- 抽出された輪郭座標はCSV形式で出力されます。抽出された輪郭を視覚的に確認するための輪郭線付き動画も生成されます。
-- 本モデルは、多様な超音波装置や話者データを用いて学習されています。詳細な手法については、[こちら](https://doi.org/10.1250/ast.e24.128)の論文を参照してください。
+## Overview of This Model
+- This model is a tool that uses DeepLabCut (a deep learning-based tool for accurate tracking with a GUI) to automatically extract tongue contours from ultrasound videos. It was developed to streamline the analysis of tongue movements in speech research and is compatible with both Windows and Mac.
+- Extracted contour coordinates are output in CSV format. Videos with overlaid contour lines are also generated for visual confirmation of the extracted contours.
+- The model has been trained using data from various ultrasound devices and speakers. For detailed methodology, refer to the following paper:  
+  [https://doi.org/10.1250/ast.e24.128](https://doi.org/10.1250/ast.e24.128)
 
-## 引用
-論文や研究でこのモデルを使う場合、以下の論文を引用してください：
-> J. Sun, T. Kitamura, and R. Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).  
-> https://doi.org/10.1250/ast.e24.128
+## Citation
+When using this model in papers or research, please cite the following:  
+> J. Sun, T. Kitamura, and R. Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut," _Acoustical Science and Technology_, 1-7 (2025).  
+> [https://doi.org/10.1250/ast.e24.128](https://doi.org/10.1250/ast.e24.128)
 
-## DeepLabCutのインストール
-### Windowsでのインストール手順
+## DeepLabCut Installation
+### Installation Instructions for Windows
 1. **Miniconda**  
-   - インストール：https://docs.anaconda.com/miniconda/
-   - サイトからダウンロードし，画面の指示に従ってインストールする．
+   - Install: [https://docs.anaconda.com/miniconda/](https://docs.anaconda.com/miniconda/)  
+   - Download from the website and follow the on-screen instructions.
 
-2. **Nvidiaドライバー**（GPUを使う場合のみ）
-   - GPUを使うなら，Nvidiaのドライバーをインストールしてください。
-   - インストール：https://www.nvidia.com/Download/index.aspx?lang=en-us
-   - 自分のGPUに合うドライバーを選んでください（「Windowsキー＋R」を押して「**dxdiag**」と入力して、確認してください）。
+2. **Nvidia Driver** (only if using a GPU)  
+   - If using a GPU, install the Nvidia driver.  
+   - Install: [https://www.nvidia.com/Download/index.aspx?lang=en-us](https://www.nvidia.com/Download/index.aspx?lang=en-us)  
+   - Select the driver compatible with your GPU (check by pressing “Windows key + R” and typing “**dxdiag**”).
 
-3. **CUDA Toolkit**（GPUを使う場合のみ）
-   - GPUで高速処理するためのツール。
-   - インストール：https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local
-   - Windowsならバージョン11を選んでインストールしてください．
+3. **CUDA Toolkit** (only if using a GPU)  
+   - A tool for high-speed processing with a GPU.  
+   - Install: [https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local)  
+   - Select version 11 for Windows and install.
 
-*注*: GPUがない場合は，MinicondaだけでOK！
+*Note*: If you don’t have a GPU, Miniconda alone is sufficient!
 
-
-4. **Anaconda Prompt**で以下のコマンドを順に実行します。
+4. Run the following commands in **Anaconda Prompt** in sequence:
 
 ```bash
 conda create -n deeplabcut python=3.10 -y
@@ -40,18 +40,20 @@ pip install deeplabcut[gui]==2.3.9
 pip install tensorflow_gpu==2.10.0
 conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
 ```
-*注*: GPUがない場合、以下の2行のコマンドは不要です。
+
+*Note*: If you don’t have a GPU, the following two commands are unnecessary:
 ```bash
 pip install tensorflow_gpu==2.10.0
 conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
 ```
-**起動**
+
+**Launch**:
 ```bash
 python -m deeplabcut
 ```
 
-**インストール失敗時の対応**:
-インストールが失敗した場合、以下のコマンドを再実行してください：
+**If Installation Fails**:  
+If the installation fails, rerun the following commands:
 
 ```bash
 conda activate deeplabcut
@@ -59,14 +61,14 @@ pip install "numpy<2"
 python -m deeplabcut
 ```
 
-### Macでのインストール手順
+### Installation Instructions for Mac
 1. **Python 3.12**  
-   - インストール：https://www.python.org/downloads/macos/
+   - Install: [https://www.python.org/downloads/macos/](https://www.python.org/downloads/macos/)
 
 2. **Miniconda**  
-   - インストール：https://docs.anaconda.com/miniconda/
+   - Install: [https://docs.anaconda.com/miniconda/](https://docs.anaconda.com/miniconda/)
 
-3. **ターミナル**で以下のコマンドを順に実行します。
+3. Run the following commands in **Terminal** in sequence:
 
 ```bash
 conda create -n deeplabcut python=3.10 -y
@@ -77,87 +79,77 @@ conda install -c conda-forge deeplabcut -y
 pip install deeplabcut[gui]
 ```
 
-*注*: 上記の `pip install deeplabcut[gui]` が失敗した場合、以下を試してください：
+*Note*: If `pip install deeplabcut[gui]` fails, try the following:
 
 ```bash
 pip install 'deeplabcut[gui]'
 ```
 
-**起動**:
-
+**Launch**:
 ```bash
 python -m deeplabcut
 ```
 
-## 超音波動画の解析方法について
-### トレーニング済みモデルのダウンロード
+## Analyzing Ultrasound Videos
+### Downloading the Pre-trained Model
+Download the DLC-Model. Training details:  
+- **Data Volume**: 4,821 frames  
+- **Devices Used**: GE Healthcare and AAA ultrasound devices  
+- **Speakers**: Asian and Western speakers  
+- **Training Environment**: MSI laptop (using NVIDIA GeForce RTX 3060 GPU), trained for approximately 1.03 million iterations over 10 hours.
 
-DLC-Modelをダウンロードしてください。モデルの学習詳細：
-- **データ量**: 4,821フレーム
-- **使用機器**: GE HealthcareおよびAAA超音波装置
-- **話者**: アジア系および欧米系の話者
-- **学習環境**: MSIノートPC（NVIDIA GeForce RTX 3060 GPU使用）、約10時間で103万回学習。
+### Data Preparation
+- **Video Formats**: MP4, AVI, MKV, MOV  
+- **Video Size**: 320x240 pixels (required for accurate contour extraction)  
+- **Tongue Orientation**: Tongue tip on the right, tongue root on the left in the video.  
 
-### データの準備
+**Sample ultrasound videos for demonstration are available in the demo folder.**
 
-- **動画形式**: **MP4**、AVI、MKV、MOV
-- **動画サイズ**: 320x240ピクセル（正確な輪郭抽出に必須）
-- **舌の向き**: 動画内で舌先が右側、舌根が左側。
+### Tongue Contour Keypoints
+- The tongue contour is extracted using **11 keypoints**.  
+- Keypoints are not equally spaced but are arranged to efficiently and accurately capture the tongue's shape.
 
-**デモ用のサンプル超音波動画をdemoから入手できます**。
+### How to Use This Model (Click the image below for a video tutorial)
 
-### 舌輪郭のキーポイントについて
+[![Tongue Contour Extraction Tutorial Video](https://github.com/user-attachments/assets/e0b53433-387e-4873-afe7-2fe1a3bc3a5e)](https://www.youtube.com/watch?v=4pZpJK13p2I)
 
-- 舌の輪郭は**11個のキーポイント**で抽出します。
-- キーポイントは等間隔ではなく、舌の形状を効率的かつ正確に捉えるよう配置しています。
-
-### 本モデルの使い始め（動画による解説は下の画像をクリックしてください）
-
-[![舌輪郭抽出の解説動画](https://github.com/user-attachments/assets/e0b53433-387e-4873-afe7-2fe1a3bc3a5e)](https://www.youtube.com/watch?v=4pZpJK13p2I)
-
-1. **DeepLabCutの起動**:
-
+1. **Launch DeepLabCut**:
    ```bash
    conda activate deeplabcut
    python -m deeplabcut
    ```
 
-2. **プロジェクトの読み込み**:
-   - GUIで「**Load Project**」をクリックし、DLC-Modelフォルダ内の **`config.yaml`** を選択。
+2. **Load Project**:
+   - In the GUI, click “**Load Project**” and select the **`config.yaml`** file from the DLC-Model folder.
 
-3. **動画の解析（輪郭抽出）**:
-   - 「**Analyze videos**」で動画を選択。
-   - 舌先が右、舌根が左になるように動画を準備。
-   - チェックボックス：☑ **Save result(s) as** CSV, ☑ **Filter predictions**, ☑ **Plot trajectories**。
-   - 画面の右下の「**Analyze videos**」をクリック。
-   - **処理速度**:
-     - Windows GPU（例：NVIDIA RTX 3060）: 約200フレーム/秒
-     - Windows/Mac CPU（例：M1/M2）: 約10～20フレーム/秒
+3. **Analyze Videos (Contour Extraction)**:
+   - Select videos via “**Analyze videos**”.  
+   - Ensure the tongue tip is on the right and the tongue root is on the left.  
+   - Check the following boxes: ☑ **Save result(s) as** CSV, ☑ **Filter predictions**, ☑ **Plot trajectories**.  
+   - Click “**Analyze videos**” in the bottom right corner.  
+   - **Processing Speed**:  
+     - Windows GPU (e.g., NVIDIA RTX 3060): ~200 frames/second  
+     - Windows/Mac CPU (e.g., M1/M2): ~10–20 frames/second  
 
-4. **輪郭線付き動画の作成**:
-   - 「**Create videos**」をクリック。
-   - チェックボックス：☑ **Plot all bodyparts**, ☑ **Draw skeleton**, ☑ **Use filtered data**, ☑ **Plot trajectories**。
-   - 画面の右下の「**Create videos**」をクリック。
+4. **Create Videos with Contours**:
+   - Click “**Create videos**”.  
+   - Check the following boxes: ☑ **Plot all bodyparts**, ☑ **Draw skeleton**, ☑ **Use filtered data**, ☑ **Plot trajectories**.  
+   - Click “**Create videos**” in the bottom right corner.
 
-5. **結果の確認**:
-   - 輪郭線付き動画で舌の形状を確認（分析結果は元の動画と同じフォルダに保存されます）。
-   - 「**・・・filtered**」CSVファイルを使用して分析。
+5. **Review Results**:
+   - Check the tongue shape in the videos with overlaid contours (results are saved in the same folder as the original videos).  
+   - Use the “**…filtered**” CSV file for analysis.
 
+## Disclaimer
+This software is provided as-is and may contain bugs or issues. Please note the following:  
+- The output results are not perfect, and the accuracy of contours must be verified using the generated videos.  
+- Updates to DeepLabCut or its dependencies may cause this model to stop functioning.  
+- The authors are not obligated to fix bugs or provide support, but bug reports are welcome (see contact details below).  
+- The authors and related institutions are not responsible for any outcomes resulting from the use (appropriate or otherwise) of this model.  
 
-## 免責事項
+We hope this model proves useful for your research!
 
-本ソフトウェアは現状のまま提供され、バグや不具合を含む可能性があります。使用に際し、以下の点をご了承ください：
-
-- 出力結果は完璧ではなく、生成された動画で輪郭の正確性を確認する必要があります。
-- DeepLabCutや依存関係のアップデートにより、本モデルが動作しなくなる可能性があります。
-- 著者はバグ修正やサポートの義務を負いませんが、バグ報告は歓迎します（下記の連絡先参照）。
-- 著者らおよび関連機関は、本モデルの使用（適切・不適切問わず）による結果に責任を負いません。
-
-本モデルをご利用いただき、研究に役立つことを願っています！
-
-## サポートおよび連絡先
-
-サポートが必要な場合、以下に連絡してください：
-- J. Sun ([jsunsang901126@gmail.com](jsunsang901126@gmail.com))
-- T. Kitamura ([t-kitamu@konan-u.ac.jp](t-kitamu@konan-u.ac.jp))
-
+## Support and Contact
+For support, please contact:  
+- J. Sun ([jsunsang901126@gmail.com](mailto:jsunsang901126@gmail.com))  
+- T. Kitamura ([t-kitamu@konan-u.ac.jp](mailto:t-kitamu@konan-u.ac.jp))
