@@ -36,7 +36,7 @@ pip install tensorflow_gpu==2.10.0  # Skip if no GPU
 conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y  # Skip if no GPU
 ```
 
-**Launch**:  
+**Start Up**:  
 ```bash
 python -m deeplabcut
 ```  
@@ -66,7 +66,7 @@ conda install -c conda-forge deeplabcut -y
 pip install 'deeplabcut[gui]'  # Use quotes if errors occur
 ```  
 
-**Launch**:  
+**Start Up**:  
 ```bash
 python -m deeplabcut
 ```  
