@@ -93,7 +93,7 @@ python -m deeplabcut
 - **動画サイズ**: 320x240ピクセル（正確な輪郭抽出に必須）
 - **舌の向き**: 動画内で舌先が右側、舌根が左側。
 
-デモ用のサンプル超音波動画は、保存場所の [demo](https://drive.google.com/drive/folders/1hYzPtkS1NvW67NTrU19T1dnXV5VXVT3C?usp=sharing)
+デモ用のサンプル超音波動画は [こちら](https://drive.google.com/drive/folders/1hYzPtkS1NvW67NTrU19T1dnXV5VXVT3C?usp=sharing）からダウンロード可能です。
 
 ## 使い方について
 
@@ -135,7 +135,7 @@ python -m deeplabcut
 
 ## トレーニング済みモデルのダウンロード
 
-トレーニング済みモデルは [こちら](https://example.com/deeplabcut-ultrasound-model)（実際のリンクに置き換え）からダウンロード可能です。モデルの学習詳細：
+トレーニング済みモデルは [こちら](https://drive.google.com/drive/folders/1ShHfXOWP--4gdrusy9THTtJ6AP5iy2ig?usp=sharing）からダウンロード可能です。モデルの学習詳細：
 - **データ量**: 4,821フレーム
 - **使用機器**: GE HealthcareおよびTripleA超音波装置
 - **話者**: アジア系および欧米系の話者
