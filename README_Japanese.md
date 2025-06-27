@@ -12,10 +12,6 @@
 > https://doi.org/10.1250/ast.e24.128
 
 ## インストール
-
-以下の手順で、WindowsまたはMacにDeepLabCut-Ultrasoundをインストールしてください。
-
-
 ### Windowsでのインストール手順
 1. **Miniconda**  
    - インストール：https://docs.anaconda.com/miniconda/
