@@ -93,7 +93,7 @@ python -m deeplabcut
 - **動画サイズ**: 320x240ピクセル（正確な輪郭抽出に必須）
 - **舌の向き**: 動画内で舌先が右側、舌根が左側。
 
-デモ用のサンプル超音波動画は [こちら](https://drive.google.com/drive/folders/1hYzPtkS1NvW67NTrU19T1dnXV5VXVT3C?usp=sharing）からダウンロード可能です。
+デモ用のサンプル超音波動画は [こちら](https://drive.google.com/drive/folders/1hYzPtkS1NvW67NTrU19T1dnXV5VXVT3C?usp=sharing)からダウンロード可能です。
 
 ## 使い方について
 
