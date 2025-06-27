@@ -2,29 +2,29 @@
 
 ## 本モデルの概要
 - 本モデルは、DeepLabCut（深層学習を用いて、正確なトラッキングをGUIで可能にするツール）を用いて超音波動画から舌の輪郭を自動抽出するツールです。音声研究における舌の動きの分析を効率化するために開発され、WindowsおよびMacで動作します。
-- 抽出された輪郭座標はCSV形式で出力される。2つのCSVファイルが出力されますが、分析にはファイル名が「**filtered**」で終わる方を使用してください。また、抽出された輪郭を視覚的に確認するための輪郭線付き動画も生成されます。
-- 本モデルは、DeepLabCutを基盤として構築され、多様な超音波装置や話者データを用いて学習されています。詳細な手法については、[こちら](https://doi.org/10.1250/ast.e24.128)の論文を参照してください。
+- 抽出された輪郭座標はCSV形式で出力されます。抽出された輪郭を視覚的に確認するための輪郭線付き動画も生成されます。
+- 本モデルは、多様な超音波装置や話者データを用いて学習されています。詳細な手法については、[こちら](https://doi.org/10.1250/ast.e24.128)の論文を参照してください。
 
-## 研究で使う場合
-論文や研究でこのモデルを使うなら，以下を引用する：
+## 引用
+論文や研究でこのモデルを使う場合、以下の論文を引用してください：
 > J.Sun, T.Kitamura, and R.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).  
 > https://doi.org/10.1250/ast.e24.128
 
-## DeepLabCutを動作するためのソフトウェアのインストール
+## DeepLabCutのインストール
 ### Windowsでのインストール手順
 1. **Miniconda**  
    - インストール：https://docs.anaconda.com/miniconda/
    - サイトからダウンロードし，画面の指示に従ってインストールする．
 
 2. **Nvidiaドライバー**（GPUを使う場合のみ）
-   - GPUを使うなら，Nvidiaのドライバーをインストールする．
+   - GPUを使うなら，Nvidiaのドライバーをインストールしてください。
    - インストール：https://www.nvidia.com/Download/index.aspx?lang=en-us
-   - 自分のGPUに合うドライバーを選ぶ（「Windowsキー＋R」を押して「**dxdiag**」と入力して、確認してください）。
+   - 自分のGPUに合うドライバーを選んでください（「Windowsキー＋R」を押して「**dxdiag**」と入力して、確認してください）。
 
 3. **CUDA Toolkit**（GPUを使う場合のみ）
-   - GPUで高速処理するためのツール．
+   - GPUで高速処理するためのツール。
    - インストール：https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local
-   - Windowsならバージョン11を選んでインストールする．
+   - Windowsならバージョン11を選んでインストールしてください．
 
 *注*: GPUがない場合は，MinicondaだけでOK！
 
@@ -41,7 +41,7 @@ pip install tensorflow_gpu==2.10.0
 conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
 python -m deeplabcut
 ```
-*注*: GPUがない場合、この2行のコマンドは不要です。
+*注*: GPUがない場合、以下の2行のコマンドは不要です。
 ```bash
 pip install tensorflow_gpu==2.10.0
 conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
@@ -88,15 +88,14 @@ python -m deeplabcut
 
 ### 舌輪郭のキーポイントについて
 
-- 舌の輪郭は**11個のキーポイント**で抽出。
-- キーポイントは等間隔ではなく、舌の形状を効率的かつ正確に捉えるよう配置。
-- 11点で十分な精度を確保し、30点またはそれ以上に比べ、学習データ作成や計算時間を削減。
+- 舌の輪郭は**11個のキーポイント**で抽出します。
+- キーポイントは等間隔ではなく、舌の形状を効率的かつ正確に捉えるよう配置しています。
 
 ## トレーニング済みモデルのダウンロード
 
 トレーニング済みモデルは [こちら](https://drive.google.com/drive/folders/1ShHfXOWP--4gdrusy9THTtJ6AP5iy2ig?usp=sharing)からダウンロード可能です。モデルの学習詳細：
 - **データ量**: 4,821フレーム
-- **使用機器**: GE HealthcareおよびTripleA超音波装置
+- **使用機器**: GE HealthcareおよびAAA超音波装置
 - **話者**: アジア系および欧米系の話者
 - **学習環境**: MSIノートPC（NVIDIA GeForce RTX 3060 GPU使用）、約10時間で103万回学習。
 
@@ -110,7 +109,7 @@ python -m deeplabcut
 
 ## 超音波動画の解析方法について
 
-### 本モデルの使い始め（解析方法は[こちら](https://drive.google.com/file/d/1axaQffUmaZk3J0bc2H_LCqMNaJGUw62B/view?usp=sharing)の動画でも確認可能）
+### 本モデルの使い始め（動画による解説は[こちら](https://drive.google.com/file/d/1axaQffUmaZk3J0bc2H_LCqMNaJGUw62B/view?usp=sharing)）
 
 1. **DeepLabCutの起動**:
 
