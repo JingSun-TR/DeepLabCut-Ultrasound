@@ -2,12 +2,12 @@
 ![1](https://github.com/user-attachments/assets/efbfdc63-50a8-4d36-9e76-ae6c50319f64)![2](https://github.com/user-attachments/assets/ae438dfb-cae2-4d0e-b55b-fec52bba5cc7)
 
 ## About DeepLabCut-Ultrasound 
-This model is a DeepLabCut-based tool (a deep learning framework with a GUI for precise markerless pose estimation) designed to automatically extract tongue contours from ultrasound videos. It streamlines the analysis of tongue movements in speech research and is compatible with both Windows and macOS.  
+This model is a DeepLabCut-based tool (a deep learning framework with a GUI for precise markerless pose estimation) designed to extract tongue contours from ultrasound videos automatically. It streamlines the analysis of tongue movements in speech research and is compatible with both Windows and macOS.
 
 The extracted contour coordinates are output in CSV format, and videos with overlaid contour lines are generated for visual verification. The model has been trained on data from multiple ultrasound devices and speakers. For methodological details, refer to the accompanying [paper](https://doi.org/10.1250/ast.e24.128):  
 
 ## Citation  
-When using this model in publications or research, please cite:  
+When using this model in publications or research, please cite: 
 > J. Sun, T. Kitamura, and R. Hayashi, "Extraction of Speech Organ Contours from Ultrasound and Real-time MRI Data using DeepLabCut," *Acoustical Science and Technology*, 1–7 (2025).  
 > [https://doi.org/10.1250/ast.e24.128](https://doi.org/10.1250/ast.e24.128)  
 
@@ -83,7 +83,7 @@ python -m deeplabcut
 ### Preparing your Data
 - **Supported Formats**: MP4, AVI, MKV, MOV  
 - **Resolution**: 320×240 pixels (required for accuracy)  
-- **Orientation**: Tongue tip on the right, root on the left.  
+- **Orientation**: The tongue tip is on the right, and the root is on the left.
 - **Demo videos** are provided in the `demo` folder.  
 
 ### Keypoints  
@@ -126,12 +126,12 @@ python -m deeplabcut
 
 ## Disclaimer  
 This software is provided **as-is** with no warranties. Note the following:  
-- Contour accuracy should be validated using the output videos.  
-- Compatibility may break with future DeepLabCut updates.  
-- Bug fixes and support are not guaranteed, though reports are welcome (see contact below).  
-- The authors and affiliated institutions are not liable for any outcomes resulting from this tool’s use.  
+- Contour accuracy should be validated using the output videos.
+- Compatibility may be affected by future DeepLabCut updates.
+- Bug fixes and support are not guaranteed; however, reports are welcome (see contact information below).
+- The authors and affiliated institutions are not liable for any outcomes resulting from the use of this tool.
 
-We hope this tool advances your research!  
+We hope this tool advances your research! 
 
 ## Support or Contact  
 Please contact Jing Sun (jsunsang901126@gmail.com), Tatsuya Kitamura (t-kitamu@konan-u.ac.jp) for support.
