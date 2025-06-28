@@ -1,67 +1,156 @@
-# DeepLabCut-ultrasound　超声波舌位自动提取模型使用说明  
+# DeepLabCut-Ultrasound
 
-**模型简介**
+![1](https://github.com/user-attachments/assets/efbfdc63-50a8-4d36-9e76-ae6c50319f64)![2](https://github.com/user-attachments/assets/ae438dfb-cae2-4d0e-b55b-fec52bba5cc7)
 
-这个模型是基于DeepLabCut（DLC）深度学习框架开发的专用工具，能够自动识别超声波图像中的舌头轮廓。它就像一位"数字观察员"，可以精确地标出舌头边缘的关键位置，并将这些位置信息以坐标形式保存到CSV文件中，方便后续分析和研究。  
+## 本模型概述
+- 本模型利用DeepLabCut（一种通过深度学习实现精准追踪的图形界面工具），从超声波视频中自动提取舌头的轮廓，旨在提高语音研究中舌头运动分析的效率，适用于Windows和Mac系统。
+- 提取的轮廓坐标以CSV格式输出，并生成带有轮廓线的视频以便直观验证。
+- 本模型使用多种超声波设备和不同说话者的数据进行训练。详细方法请参阅[此论文](https://doi.org/10.1250/ast.e24.128)。
 
-**学术引用**
+## 引用
+在论文或研究中使用本模型时，请引用以下文献：
+> J. Sun, T. Kitamura, and R. Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_, 1-7(2025).  
+> https://doi.org/10.1250/ast.e24.128
 
-**重要提示：如果您在学术研究中使用本模型，请在发表的论文中引用以下文献：**
-J.Sun, T.Kitamura, and R.Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).
-https://doi.org/10.1250/ast.e24.128
+## DeepLabCut的安装
+### Windows安装步骤
+1. **Miniconda**
+   - 安装：https://docs.anaconda.com/miniconda/
+   - 从官网下载并按照提示安装。
 
-**系统要求**
+2. **Nvidia驱动程序**（仅限使用GPU的情况）
+   - 若使用GPU，请安装Nvidia驱动。
+   - 安装：https://www.nvidia.com/Download/index.aspx?lang=en-us
+   - 根据您的GPU型号选择合适的驱动（按“Windows键+R”，输入“**dxdiag**”查看）。
 
-在使用这个模型前，您的电脑需要安装以下软件环境：  
-1. DeepLabCut（DLC）主程序 - 这是模型运行的基础框架  
-2. Miniconda - 一个轻量级的Python环境管理工具  
-3. Nvidia显卡驱动（可选，但推荐） - 如果使用独立显卡加速运算  
-4. Cuda工具包（可选，但推荐） - 用于GPU加速计算的配套软件  
+3. **CUDA Toolkit**（仅限使用GPU的情况）
+   - 用于GPU加速处理的工具。
+   - 安装：https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local
+   - Windows用户请选择版本11进行安装。
 
-**操作系统兼容性**
-1. Windows和macOS系统均可使用  
-2. 有无GPU均可运行，但性能差异较大  
+*注*：若无GPU，仅需安装Miniconda即可。
 
-**处理速度对比**
-1. 有GPU（显卡加速）：  
-  ① 每秒可处理200帧以上  
-  ② 适合批量处理大量视频数据  
-2. 无GPU（仅用CPU计算）：  
-  ① 每秒仅能处理10-20帧  
-  ② 速度较慢，适合少量数据或测试用途  
+4. 在**Anaconda Prompt**中依次执行以下命令：
 
-建议：如果您的电脑配有NVIDIA独立显卡（尤其是游戏本或工作站），强烈建议安装GPU驱动和CUDA工具包，这样处理速度可提升10-20倍！  
+```bash
+conda create -n deeplabcut python=3.10 -y
+conda activate deeplabcut
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+conda config --show channels
+pip install deeplabcut[gui]==2.3.9
+pip install tensorflow_gpu==2.10.0
+conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
+```
+*注*：若无GPU，以下两行命令无需执行：
+```bash
+pip install tensorflow_gpu==2.10.0
+conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
+```
+**启动**
+```bash
+python -m deeplabcut
+```
 
-**视频规格要求**  
+**安装失败时的处理**：
+若安装失败，请重新执行以下命令：
 
-这个模型对处理的超声波视频有严格的尺寸要求：  
-1. 必须是320像素（宽）×240像素（高）的尺寸  
-2. 这个要求是因为模型在训练时使用的都是这个尺寸的视频  
-3. 如果视频尺寸不符，模型就无法准确识别舌头轮廓  
+```bash
+conda activate deeplabcut
+pip install "numpy<2"
+python -m deeplabcut
+```
 
-就像我们使用不同尺寸的钥匙开锁一样，视频尺寸就是这把"钥匙"的齿纹，必须完全匹配才能正常工作。  
+### Mac安装步骤
+1. **Python 3.12**
+   - 安装：https://www.python.org/downloads/macos/
 
-**关键点设置原理**  
+2. **Miniconda**
+   - 安装：https://docs.anaconda.com/miniconda/
 
-模型使用11个关键点来描绘舌头轮廓：  
-1. 这些点不是简单地平均分布在舌头边缘  
-2. 而是根据舌头形状的特征位置进行标记  
-3. 这样可以更准确地反映真实的舌头形态  
+3. 在**终端**中依次执行以下命令：
 
-**为什么不等距分布？**  
-1. 如果简单地把11个点等距排布，可能会错过舌头轮廓的重要特征  
-2. 就像画人脸时，关键点应该放在眼睛、鼻子、嘴角等特征位置，而不是均匀分布在脸上  
-3. 要等距分布且保持精度，需要增加到约30个点，但这会显著增加处理时间  
+```bash
+conda create -n deeplabcut python=3.10 -y
+conda activate deeplabcut
+conda install -c conda-forge opencv -y
+conda install -c conda-forge tensorflow=2.10.0 -y
+conda install -c conda-forge deeplabcut -y
+pip install deeplabcut[gui]
+```
 
-**性能考量**  
+*注*：若 `pip install deeplabcut[gui]` 失败，请尝试以下命令：
 
-关键点数量与处理效率的关系：  
-1. 11个点：处理速度快，能满足基本形状分析需求  
-2. 增加到30个点：  
-  ① 能更精确地描绘轮廓  
-  ② 但训练时间可能延长数倍  
-  ③ 处理每个视频的速度也会明显变慢  
-  ④ 对电脑硬件要求更高  
+```bash
+pip install 'deeplabcut[gui]'
+```
 
-这个设计在精度和效率之间取得了平衡，特别适合需要处理大量视频数据的研究场景。就像用适量的笔画勾勒出最重要的形状特征，既保证了识别效果，又不会让电脑"过度劳累"。
+**启动**：
 
+```bash
+python -m deeplabcut
+```
+
+## 超声波视频的分析方法
+### 预训练模型下载
+请下载DLC-Model。模型训练详情：
+- **数据量**：4,821帧
+- **使用设备**：GE Healthcare及AAA超声波设备
+- **说话者**：亚洲及欧美说话者
+- **训练环境**：MSI笔记本（使用NVIDIA GeForce RTX 3060 GPU），约10小时完成103万次训练。
+
+### 数据准备
+- **视频格式**：MP4、AVI、MKV、MOV
+- **视频尺寸**：320x240像素（精确轮廓提取的必要条件）
+- **舌头方向**：视频中舌尖在右侧，舌根在左侧。
+
+**可从demo获取用于测试的超声波视频样本**。
+
+### 舌轮廓的关键点
+- 舌轮廓通过**11个关键点**提取。
+- 关键点非等间距排列，旨在高效且准确捕捉舌头形状。
+
+### 本模型使用方法（点击下方图片查看视频教程）
+
+[![舌轮廓提取教程视频](https://github.com/user-attachments/assets/e0b53433-387e-4873-afe7-2fe1a3bc3a5e)](https://www.youtube.com/watch?v=4pZpJK13p2I)
+
+1. **启动DeepLabCut**：
+
+   ```bash
+   conda activate deeplabcut
+   python -m deeplabcut
+   ```
+
+2. **加载项目**：
+   - 在GUI中点击“**`Load Project`**”，选择`DLC-Model`文件夹中的`**config.yaml**`。
+
+3. **视频分析（轮廓提取）**：
+   - 点击“**`Analyze videos`**”选择视频。
+   - 确保视频中舌尖在右侧，舌根在左侧。
+   - 勾选：☑ **Save result(s) as** CSV, ☑ **Filter predictions**, ☑ **Plot trajectories**。
+   - 点击界面右下角的“**`Analyze videos`**”。
+   - **处理速度**：
+     - Windows GPU（例如：NVIDIA RTX 3060）：约200帧/秒
+     - Windows/Mac CPU（例如：M1/M2）：约10～20帧/秒
+
+4. **生成带轮廓线的视频**：
+   - 点击“**`Create videos`**”。
+   - 勾选：☑ **Plot all bodyparts**, ☑ **Draw skeleton**, ☑ **Use filtered data**, ☑ **Plot trajectories**。
+   - 点击界面右下角的“**`Create videos`**”。
+
+5. **结果验证**：
+   - 通过带轮廓线的视频确认舌头形状（分析结果保存在与原视频相同的文件夹中）。
+   - 使用“**`・・・filtered`**”CSV文件进行分析。
+
+## 免责声明
+本软件按现状提供，可能包含错误或缺陷。使用时请注意以下事项：
+- 输出结果可能不完美，需通过生成视频确认轮廓的准确性。
+- DeepLabCut或其依赖项的更新可能导致本模型无法正常运行。
+- 作者不承担修复错误或提供支持的义务，但欢迎错误报告（请联系下方联系方式）。
+- 作者及相关机构对本模型的使用（无论是否适当）所导致的后果不承担任何责任。
+
+希望本模型能为您的研究提供帮助！
+
+## 支持与联系方式
+如需支持，请联系：
+- J. Sun ([jsunsang901126@gmail.com](mailto:jsunsang901126@gmail.com))
+- T. Kitamura ([t-kitamu@konan-u.ac.jp](mailto:t-kitamu@konan-u.ac.jp))
