@@ -51,7 +51,7 @@ conda install -c conda-forge cudatoolkit=11.8.0 cudnn=8.8.0 -y
 python -m deeplabcut
 ```
 
-**安装失败时的处理方法**：
+**安装失败时的处理方法**
 
 若安装失败，请重新执行以下命令：
 
