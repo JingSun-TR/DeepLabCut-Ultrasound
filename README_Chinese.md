@@ -30,7 +30,7 @@
 
 *注*：若无GPU，仅需安装Miniconda即可。
 
-4. 在**Anaconda Prompt**中依次执行以下命令：
+4. 在**`Anaconda Prompt`**中依次执行以下命令：
 
 ```bash
 conda create -n deeplabcut python=3.10 -y
@@ -67,7 +67,7 @@ python -m deeplabcut
 2. **Miniconda**
    - 安装：https://docs.anaconda.com/miniconda/
 
-3. 在**终端**中依次执行以下命令：
+3. 在**`终端`**中依次执行以下命令：
 
 ```bash
 conda create -n deeplabcut python=3.10 -y
