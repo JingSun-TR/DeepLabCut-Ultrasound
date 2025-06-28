@@ -13,7 +13,7 @@
 > https://doi.org/10.1250/ast.e24.128
 
 ## DeepLabCut的安装
-### Windows安装步骤
+### 在Windows系统中的安装步骤
 1. **Miniconda**
    - 安装：https://docs.anaconda.com/miniconda/
    - 从官网下载并按照提示安装。
@@ -61,7 +61,7 @@ pip install "numpy<2"
 python -m deeplabcut
 ```
 
-### Mac安装步骤
+### 在Mac系统中的安装步骤
 1. **Python 3.12**
    - 安装：https://www.python.org/downloads/macos/
 
