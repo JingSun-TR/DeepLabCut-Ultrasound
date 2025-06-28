@@ -125,7 +125,7 @@ python -m deeplabcut
    - 在GUI中点击 **`Load Project`**，选择 **`DLC-Model`** 文件夹中的 **`config.yaml`** 。
 
 3. **视频分析（轮廓提取）**：
-   - 点击 **`Analyze videos`**选择视频。
+   - 点击 **`Analyze videos`** 选择视频。
    - 确保视频中舌尖在右侧，舌根在左侧。
    - 勾选：☑ **Save result(s) as** CSV, ☑ **Filter predictions**, ☑ **Plot trajectories**。
    - 点击界面右下角的 **`Analyze videos`** 。
