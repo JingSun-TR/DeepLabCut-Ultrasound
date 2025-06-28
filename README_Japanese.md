@@ -126,25 +126,25 @@ DLC-Modelをダウンロードしてください。モデルの学習詳細：
    ```
 
 2. **プロジェクトの読み込み**:
-   - GUIで「**`Load Project`**」をクリックし、`DLC-Model`フォルダ内の **`config.yaml`** を選択。
+   - GUIで **`Load Project`** をクリックし、**`DLC-Model`** フォルダ内の **`config.yaml`** を選択。
 
 3. **動画の解析（輪郭抽出）**:
-   - 「**`Analyze videos`**」で動画を選択。
+   - **`Analyze videos`** で動画を選択。
    - 舌先が右、舌根が左になるように動画を準備。
    - チェックボックス：☑ **Save result(s) as** CSV, ☑ **Filter predictions**, ☑ **Plot trajectories**。
-   - 画面の右下の「**`Analyze videos`**」をクリック。
+   - 画面の右下の **`Analyze videos`** をクリック。
    - **処理速度**:
      - Windows GPU（例：NVIDIA RTX 3060）: 約200フレーム/秒
      - Windows/Mac CPU（例：M1/M2）: 約10～20フレーム/秒
 
 4. **輪郭線付き動画の作成**:
-   - 「**`Create videos`**」をクリック。
+   - **`Create videos`** をクリック。
    - チェックボックス：☑ **Plot all bodyparts**, ☑ **Draw skeleton**, ☑ **Use filtered data**, ☑ **Plot trajectories**。
-   - 画面の右下の「**`Create videos`**」をクリック。
+   - 画面の右下の **`Create videos`** をクリック。
 
 5. **結果の確認**:
    - 輪郭線付き動画で舌の形状を確認（分析結果は元の動画と同じフォルダに保存されます）。
-   - 「**`・・・filtered`**」CSVファイルを使用して分析。
+   - **`*_filtered.csv`** ファイルを使用して分析。
 
 
 ## 免責事項
