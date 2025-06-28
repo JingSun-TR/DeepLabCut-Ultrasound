@@ -18,8 +18,8 @@
    - 安装：https://docs.anaconda.com/miniconda/
    - 从官网下载并按照提示安装。
 
-2. **Nvidia驱动程序**（仅限使用GPU的情况）
-   - 若使用GPU，请安装Nvidia驱动。
+2. **Nvidia驱动程序**（仅限使用显卡的情况）
+   - 若使用显卡（GPU），请安装Nvidia驱动。
    - 安装：https://www.nvidia.com/Download/index.aspx?lang=en-us
    - 根据您的GPU型号选择合适的驱动（按“Windows键+R”，输入“**dxdiag**”查看）。
 
