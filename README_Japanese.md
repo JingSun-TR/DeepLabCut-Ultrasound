@@ -32,7 +32,7 @@
 *注*: GPUがない場合は，MinicondaだけでOK！
 
 
-4. **Anaconda Prompt**で以下のコマンドを順に実行します。
+4. **`Anaconda Prompt`** で以下のコマンドを順に実行します。
 
 ```bash
 conda create -n deeplabcut python=3.10 -y
@@ -69,7 +69,7 @@ python -m deeplabcut
 2. **Miniconda**  
    - インストール：https://docs.anaconda.com/miniconda/
 
-3. **ターミナル**で以下のコマンドを順に実行します。
+3. **`ターミナル`** で以下のコマンドを順に実行します。
 
 ```bash
 conda create -n deeplabcut python=3.10 -y
