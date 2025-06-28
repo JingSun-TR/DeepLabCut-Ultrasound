@@ -93,7 +93,7 @@ python -m deeplabcut
 
 ## 超声波视频的分析方法
 ### 预训练模型下载
-请下载**DLC-Model**。模型训练详情：
+请下载 **`DLC-Model`** 。模型训练详情：
 - **数据量**：4,821帧
 - **使用设备**：GE Healthcare及AAA超声波设备
 - **说话者**：亚洲及欧美说话者
@@ -122,10 +122,10 @@ python -m deeplabcut
    ```
 
 2. **加载项目**：
-   - 在GUI中点击`Load Project`，选择`DLC-Model`文件夹中的`config.yaml`。
+   - 在GUI中点击 **`Load Project`**，选择 **`DLC-Model`**文件夹中的 **`config.yaml`**。
 
 3. **视频分析（轮廓提取）**：
-   - 点击`Analyze videos`选择视频。
+   - 点击 **`Analyze videos`**选择视频。
    - 确保视频中舌尖在右侧，舌根在左侧。
    - 勾选：☑ **Save result(s) as** CSV, ☑ **Filter predictions**, ☑ **Plot trajectories**。
    - 点击界面右下角的 **`Analyze videos`** 。
@@ -134,13 +134,13 @@ python -m deeplabcut
      - Windows/Mac CPU（例如：M1/M2）：约10～20帧/秒
 
 4. **生成带轮廓线的视频**：
-   - 点击**`Create videos`**。
+   - 点击 **`Create videos`**。
    - 勾选：☑ **Plot all bodyparts**, ☑ **Draw skeleton**, ☑ **Use filtered data**, ☑ **Plot trajectories**。
-   - 点击界面右下角的**`Create videos`**。
+   - 点击界面右下角的 **`Create videos`**。
 
 5. **结果验证**：
    - 通过带轮廓线的视频确认舌头形状（分析结果保存在与原视频相同的文件夹中）。
-   - 使用**`・・・filtered`**CSV文件进行分析。
+   - 使用 **`・・・filtered`**CSV文件进行分析。
 
 ## 免责声明
 本软件按现状提供，可能包含错误或缺陷。使用时请注意以下事项：
