@@ -122,7 +122,7 @@ python -m deeplabcut
    ```
 
 2. **加载项目**：
-   - 在GUI中点击“**`Load Project`**”，选择`DLC-Model`文件夹中的`**config.yaml**`。
+   - 在GUI中点击**`Load Project`**，选择**`DLC-Model`**文件夹中的**`config.yaml`**。
 
 3. **视频分析（轮廓提取）**：
    - 点击**`Analyze videos`**选择视频。
