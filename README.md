@@ -122,7 +122,7 @@ python -m deeplabcut
 
 5. **Review Outputs**:  
    - Inspect overlaid contours in the generated videos.  
-   - Use the `*_filtered.csv` files for analysis.  
+   - Use the **`*_filtered.csv`** files for analysis.  
 
 ## Disclaimer  
 This software is provided **as-is** with no warranties. Note the following:  
