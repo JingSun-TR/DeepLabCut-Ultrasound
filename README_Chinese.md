@@ -122,13 +122,13 @@ python -m deeplabcut
    ```
 
 2. **加载项目**：
-   - 在GUI中点击**Load Project**，选择**DLC-Model**文件夹中的**config.yaml**。
+   - 在GUI中点击`Load Project`，选择`DLC-Model`文件夹中的`config.yaml`。
 
 3. **视频分析（轮廓提取）**：
-   - 点击**`Analyze videos`**选择视频。
+   - 点击`Analyze videos`选择视频。
    - 确保视频中舌尖在右侧，舌根在左侧。
    - 勾选：☑ **Save result(s) as** CSV, ☑ **Filter predictions**, ☑ **Plot trajectories**。
-   - 点击界面右下角的**`Analyze videos`**。
+   - 点击界面右下角的 **`Analyze videos`** 。
    - **处理速度**：
      - Windows GPU（例如：NVIDIA RTX 3060）：约200帧/秒
      - Windows/Mac CPU（例如：M1/M2）：约10～20帧/秒
