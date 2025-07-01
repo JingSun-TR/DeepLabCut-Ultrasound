@@ -161,7 +161,7 @@ DLC-Modelをダウンロードしてください。モデルの学習詳細：
 ## サポートおよび連絡先
 
 サポートが必要な場合、以下に連絡してください：
-- J. Sun ([jsunsang901126@gmail.com](jsunsang901126@gmail.com))
-- T. Kitamura ([t-kitamu@konan-u.ac.jp](t-kitamu@konan-u.ac.jp))
-- R. Hayashi ([rhayashi@kobe-u.ac.jp](rhayashi@kobe-u.ac.jp))
+- Jing Sun ([jsunsang901126@gmail.com](jsunsang901126@gmail.com))
+- Tatsuya Kitamura ([t-kitamu@konan-u.ac.jp](t-kitamu@konan-u.ac.jp))
+- Ryoko Hayashi ([rhayashi@kobe-u.ac.jp](rhayashi@kobe-u.ac.jp))
 
