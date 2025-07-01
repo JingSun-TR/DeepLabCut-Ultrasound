@@ -153,6 +153,6 @@ python -m deeplabcut
 
 ## 支持与联系方式
 如需支持，请联系：
-- J. Sun ([jsunsang901126@gmail.com](mailto:jsunsang901126@gmail.com))
-- T. Kitamura ([t-kitamu@konan-u.ac.jp](mailto:t-kitamu@konan-u.ac.jp))
-- R. Hayashi ([rhayashi@kobe-u.ac.jp](rhayashi@kobe-u.ac.jp))
+- Jing Sun ([jsunsang901126@gmail.com](mailto:jsunsang901126@gmail.com))
+- Tatsuya Kitamura ([t-kitamu@konan-u.ac.jp](mailto:t-kitamu@konan-u.ac.jp))
+- Ryoko Hayashi ([rhayashi@kobe-u.ac.jp](rhayashi@kobe-u.ac.jp))
