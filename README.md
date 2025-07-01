@@ -8,7 +8,7 @@ The extracted contour coordinates are output in CSV format, and videos with over
 
 ## Citation  
 When using this model in publications or research, please cite: 
-> J. Sun, T. Kitamura, and R. Hayashi, "Extraction of Speech Organ Contours from Ultrasound and Real-time MRI Data using DeepLabCut," *Acoustical Science and Technology*, 1–7 (2025).  
+> J. Sun, T. Kitamura, and R. Hayashi, "Extraction of Speech Organ Contours from Ultrasound and Real-time MRI Data using DeepLabCut," *Acoustical Science and Technology*, 46(4), 338-344 (2025).  
 > [https://doi.org/10.1250/ast.e24.128](https://doi.org/10.1250/ast.e24.128)  
 
 ## Installing DeepLabCut  
