@@ -10,7 +10,7 @@
 
 ## 引用
 論文や研究でこのモデルを使う場合、以下の論文を引用してください：
-> J. Sun, T. Kitamura, and R. Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_,1-7(2025).  
+> J. Sun, T. Kitamura, and R. Hayashi, "Extraction of Speech Organ Contours from Ultrasound and real-time MRI Data using DeepLabCut", _Acoustical Science and Technology_, 46(4), 338-344 (2025).  
 > https://doi.org/10.1250/ast.e24.128
 
 ## DeepLabCutのインストール
@@ -163,4 +163,5 @@ DLC-Modelをダウンロードしてください。モデルの学習詳細：
 サポートが必要な場合、以下に連絡してください：
 - J. Sun ([jsunsang901126@gmail.com](jsunsang901126@gmail.com))
 - T. Kitamura ([t-kitamu@konan-u.ac.jp](t-kitamu@konan-u.ac.jp))
+- R. Hayashi ([rhayashi@kobe-u.ac.jp](rhayashi@kobe-u.ac.jp))
 
