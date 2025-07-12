@@ -1,0 +1,741 @@
+    # Project definitions (do not edit)
+Task: palate
+scorer: sunjing
+date: Jun28
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: C:/DLC/palate-sunjing-2024-08-27
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us1.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us2.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us4.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us5.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us3.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us6.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us7.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us8.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us9.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\05TD1M001.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\62kenger549.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\ArticulateAnonymized_01.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\ArticulateAnonymized_02.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\ArticulateAnonymized_03.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\ArticulateAnonymized_04.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\ArticulateAnonymized_05.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\ArticulateAnonymized_06.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\ArticulateAnonymized_07.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\ArticulateAnonymized_08.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\ArticulateAnonymized_09.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\ArticulateAnonymized_10.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\ArticulateAnonymized_11.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\TaL_1to8003.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\TaL_1to8004.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\TaL_1to8005.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\TaL_1to8006.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\TaL_1to8007.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\TaL_1to8008.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\TaL_1to8009.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\TaL_1to8010.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\TaL_1to8011.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\TaL_1to8012.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\Ultrax_TD_001.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\Ultrax_TD_002.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\Ultrax_TD_003.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\Ultrax_TD_004.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us10.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us11.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us12.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us13.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us14.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us15.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us16.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us17.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us18.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us19.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us20.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us21.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us22.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us23.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us24.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us25.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us26.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us27.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us28.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us29.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us30.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us31.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us32.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us33.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us34.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us35.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us36.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us37.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us38.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us39.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us40.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us41.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us42.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us43.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us44.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us45.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us46.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us47.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us48.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us49.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us50.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us51.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us52.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us53.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us54.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us55.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us56.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us57.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us58.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us59.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us60.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us61.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us62.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us63.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us64.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us65.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us66.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us67.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us68.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us69.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us70.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us71.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us72.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us73.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us74.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us75.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us76.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us77.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us78.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us79.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us80.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us81.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us82.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us83.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us84.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us85.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\us86.mp4:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\UTI_Test_Set_COMBINED_ALL.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\video10.avi:
+    crop: 0, 320, 0, 240
+  C:\Users\jsuns\Desktop\palate-sunjing-2024-06-28\videos\wangkexin.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin1.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin2.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin3.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin4.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin5.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin6.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin7.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin8.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin9.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin10.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin11.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin12.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin13.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\lin14.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\osua1.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\osua2.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\osua3.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\osua4.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\osuc1.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\osuc2.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\osuc3.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\osuc4.mp4:
+    crop: 0, 320, 0, 240
+  C:\DLC\palate-sunjing-2024-08-27\videos\osuc5.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin1.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin2.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin3.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin4.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin5.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin6.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin7.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin8.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin9.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin10.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin11.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin12.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin13.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\lin14.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\osua1.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\osua2.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\osua3.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\osua4.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\osuc1.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\osuc2.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\osuc3.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\osuc4.mp4:
+    crop: 0, 320, 0, 240
+  F:\vedio\osuc5.mp4:
+    crop: 0, 320, 0, 240
+bodyparts:
+- vallecula
+- tongueRoot1
+- tongueRoot2
+- tongueBody1
+- tongueBody2
+- tongueDorsum1
+- tongueDorsum2
+- tongueBlade1
+- tongueBlade2
+- tongueTip1
+- tongueTip2
+- jinxing
+- muxing
+- shuixing
+- huoxing
+- tuxing
+- diqiu
+- yueliang
+- taiyang
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 200
+
+    # Plotting configuration
+skeleton:
+- - vallecula
+  - tongueRoot1
+- - tongueRoot1
+  - tongueRoot2
+- - tongueRoot2
+  - tongueBody1
+- - tongueBody1
+  - tongueBody2
+- - tongueBody2
+  - tongueDorsum1
+- - tongueDorsum1
+  - tongueDorsum2
+- - tongueDorsum2
+  - tongueBlade1
+- - tongueBlade1
+  - tongueBlade2
+- - tongueBlade2
+  - tongueTip1
+- - tongueTip1
+  - tongueTip2
+
+- - jinxing
+  - muxing
+- - muxing
+  - shuixing
+- - shuixing
+  - huoxing
+- - huoxing
+  - tuxing
+- - tuxing
+  - diqiu
+- - diqiu
+  - yueliang
+- - yueliang
+  - taiyang
+
+
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 3
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
