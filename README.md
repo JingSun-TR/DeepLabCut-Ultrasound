@@ -134,4 +134,4 @@ This software is provided **as-is** with no warranties. Note the following:
 We hope this tool advances your research! 
 
 ## Support or Contact  
-Please contact Jing Sun (jsunsang901126@gmail.com), Tatsuya Kitamura (t-kitamu@konan-u.ac.jp) and Ryoko Hayashi (rhayashi@kobe-u.ac.jp) for support.
+Please contact Jing Sun (jsunsang901126[at]gmail.com), Tatsuya Kitamura (t-kitamu[at]konan-u.ac.jp) and Ryoko Hayashi (rhayashi[at]kobe-u.ac.jp) for support.
